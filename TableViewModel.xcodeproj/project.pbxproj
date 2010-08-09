@@ -17,6 +17,8 @@
 		A3D4939B1210ACA60076940C /* libKiwi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D4938E1210AC440076940C /* libKiwi.a */; };
 		A3D4939D1210ACAF0076940C /* libMocky.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D4935B1210AC280076940C /* libMocky.a */; };
 		A3D4949B1210B6A90076940C /* SimpleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D494881210B6540076940C /* SimpleTableViewController.m */; };
+		A3D494B61210BA4A0076940C /* repositories.plist in Resources */ = {isa = PBXBuildFile; fileRef = A3D494B51210BA4A0076940C /* repositories.plist */; };
+		A3D494BB1210BB1F0076940C /* SimpleObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D494B11210B7370076940C /* SimpleObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +106,9 @@
 		A3D493821210AC440076940C /* Kiwi.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Kiwi.xcodeproj; path = Kiwi/Kiwi.xcodeproj; sourceTree = "<group>"; };
 		A3D494871210B6540076940C /* SimpleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleTableViewController.h; sourceTree = "<group>"; };
 		A3D494881210B6540076940C /* SimpleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleTableViewController.m; sourceTree = "<group>"; };
+		A3D494B01210B7370076940C /* SimpleObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleObject.h; sourceTree = "<group>"; };
+		A3D494B11210B7370076940C /* SimpleObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleObject.m; sourceTree = "<group>"; };
+		A3D494B51210BA4A0076940C /* repositories.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = repositories.plist; path = Resources/repositories.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +141,8 @@
 				1D3623250D0F684500981E51 /* TableViewModelAppDelegate.m */,
 				A3D494871210B6540076940C /* SimpleTableViewController.h */,
 				A3D494881210B6540076940C /* SimpleTableViewController.m */,
+				A3D494B01210B7370076940C /* SimpleObject.h */,
+				A3D494B11210B7370076940C /* SimpleObject.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -176,6 +183,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A3D494B51210BA4A0076940C /* repositories.plist */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* TableViewModel-Info.plist */,
 			);
@@ -382,6 +390,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
+				A3D494B61210BA4A0076940C /* repositories.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +427,7 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* TableViewModelAppDelegate.m in Sources */,
 				A3D4949B1210B6A90076940C /* SimpleTableViewController.m in Sources */,
+				A3D494BB1210BB1F0076940C /* SimpleObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

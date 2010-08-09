@@ -10,7 +10,6 @@
 
 
 @interface SimpleTableViewController : UITableViewController {
-
+  NSMutableArray *objects;
 }
-
 @end
