@@ -7,6 +7,7 @@
 //
 
 #import "TableViewModelAppDelegate.h"
+#import "SimpleTableViewController.h"
 
 @implementation TableViewModelAppDelegate
 
@@ -18,9 +19,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
     
-    // Override point for customization after application launch.
-	
-    [window makeKeyAndVisible];
+  SimpleTableViewController *tableViewController = [[SimpleTableViewController alloc] initWithStyle:UITableViewStylePlain];
+  self.window.rootViewController = [[[UINavigationController alloc] initWithRootViewController:tableViewController] autorelease];
+	[tableViewController release];
+  
+  [window makeKeyAndVisible];
 	
 	return YES;
 }

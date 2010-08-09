@@ -16,6 +16,7 @@
 		A3D492831210AB0C0076940C /* TestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D492821210AB0C0076940C /* TestHelper.m */; };
 		A3D4939B1210ACA60076940C /* libKiwi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D4938E1210AC440076940C /* libKiwi.a */; };
 		A3D4939D1210ACAF0076940C /* libMocky.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D4935B1210AC280076940C /* libMocky.a */; };
+		A3D4949B1210B6A90076940C /* SimpleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D494881210B6540076940C /* SimpleTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +102,8 @@
 		A3D492821210AB0C0076940C /* TestHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestHelper.m; sourceTree = "<group>"; };
 		A3D493511210AC270076940C /* Mocky.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Mocky.xcodeproj; path = LRMocky/Mocky.xcodeproj; sourceTree = "<group>"; };
 		A3D493821210AC440076940C /* Kiwi.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Kiwi.xcodeproj; path = Kiwi/Kiwi.xcodeproj; sourceTree = "<group>"; };
+		A3D494871210B6540076940C /* SimpleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleTableViewController.h; sourceTree = "<group>"; };
+		A3D494881210B6540076940C /* SimpleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +134,8 @@
 			children = (
 				1D3623240D0F684500981E51 /* TableViewModelAppDelegate.h */,
 				1D3623250D0F684500981E51 /* TableViewModelAppDelegate.m */,
+				A3D494871210B6540076940C /* SimpleTableViewController.h */,
+				A3D494881210B6540076940C /* SimpleTableViewController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -412,6 +417,7 @@
 			files = (
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* TableViewModelAppDelegate.m in Sources */,
+				A3D4949B1210B6A90076940C /* SimpleTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
