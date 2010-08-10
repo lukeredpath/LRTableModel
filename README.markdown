@@ -25,6 +25,13 @@ OK, you may not have written it; it may have been generated for you (with some c
 
 And then you have to decide where your table view should get it's data from. Should you store it in an NSArray instance variable in your view controller? Or an NSDictionary? How about pulling it straight out of a collection on one of your domain objects? There has to be a better way.
 
+### A note on building the project
+
+If you want to check the project out and build it, you'll need to make sure you initialise the project's git submodules first; it has two, Kiwi and Mocky.
+
+* Kiwi: http://www.kiwi-lib.info/
+* Mocky: http://github.com/lukeredpath/LRMocky
+
 ## A missing abstraction?
 
 Having implemented far too many UITableViewControllers in the same repetitive fashion, I started to wonder if there was a missing abstraction that should sit between your domain model and the UITableView's data source. Something that responds to events in your domain's language (e.g. receive a new tweet, delete a contact), which may or may not be the result of user input (perhaps the Tweet may have arrived from the Twitter streaming API), and publishes events in response to these that speak the language of UITableView: row has been inserted, rows have been deleted etc.
