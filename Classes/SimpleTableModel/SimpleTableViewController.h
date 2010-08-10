@@ -15,6 +15,9 @@
 
 @interface SimpleTableViewController : UITableViewController <LRTableModelEventListener, LRTableModelCellProvider> {
   SimpleTableModel *tableModel;
+  UISegmentedControl *sortOrderControl;
 }
 @property (nonatomic, readonly) SimpleTableModel *tableModel;
+
+- (void)configureToolbarItems;
 @end

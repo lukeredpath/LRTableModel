@@ -15,6 +15,7 @@
 
 - (void)dealloc 
 {
+  [sortOrderControl release];
   [tableModel release];
   [super dealloc];
 }
@@ -31,6 +32,8 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
+  
+  [self configureToolbarItems];
   
   self.title = @"Simple Table View";
   self.tableView.rowHeight = 65;
@@ -50,11 +53,44 @@
   [self.tableModel setObjects:objects];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+  [super viewWillAppear:animated];
+  [self.navigationController setToolbarHidden:NO animated:YES];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+  [super viewWillDisappear:animated];
+  [self.navigationController setToolbarHidden:YES animated:YES];
+}
+
+- (void)configureToolbarItems;
+{
+  NSMutableArray *items = [NSMutableArray array];
+  
+  if (sortOrderControl == nil) {
+    sortOrderControl = [[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObjects:@"Sort Ascending", @"Sort Descending", nil]];
+    sortOrderControl.segmentedControlStyle = UISegmentedControlStyleBar;
+    [sortOrderControl addTarget:self action:@selector(sortOrderControlChanged:) forControlEvents:UIControlEventValueChanged];
+  }  
+  [items addObject:[[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil] autorelease]];
+  [items addObject:[[[UIBarButtonItem alloc] initWithCustomView:sortOrderControl] autorelease]];
+  [items addObject:[[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil] autorelease]];
+  
+  self.toolbarItems = items;
+}
+
 - (void)addButtonTapped:(id)sender
 {
   SimpleObject *object = [[SimpleObject alloc] initWithTitle:@"A new object" description:[NSString stringWithFormat:@"This was created at %@", [NSDate date]]];
   [self.tableModel insertObject:object atIndex:0];
   [object release];
+}
+
+- (void)sortOrderControlChanged:(UISegmentedControl *)control
+{
+  
 }
 
 #pragma mark -
