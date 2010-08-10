@@ -36,10 +36,19 @@
  More examples to come soon.
  */
 
+typedef enum {
+  SortOrderUnordered = 0,
+  SortOrderAscending,
+  SortOrderDescending
+} SortOrder;
+
 @interface SimpleTableModel : LRAbstractTableModel 
 {
   NSMutableArray *objects;
+  SortOrder sortOrder; 
 }
+@property (nonatomic, assign) SortOrder sortOrder;
+
 - (void)addObject:(id)anObject;
 - (void)removeObject:(id)anObject;
 - (void)insertObject:(id)anObject atIndex:(NSInteger)index;

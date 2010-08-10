@@ -70,8 +70,9 @@
   NSMutableArray *items = [NSMutableArray array];
   
   if (sortOrderControl == nil) {
-    sortOrderControl = [[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObjects:@"Sort Ascending", @"Sort Descending", nil]];
+    sortOrderControl = [[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObjects:@"Unsorted", @"Sort Asc", @"Sort Desc", nil]];
     sortOrderControl.segmentedControlStyle = UISegmentedControlStyleBar;
+    sortOrderControl.selectedSegmentIndex = self.tableModel.sortOrder;
     [sortOrderControl addTarget:self action:@selector(sortOrderControlChanged:) forControlEvents:UIControlEventValueChanged];
   }  
   [items addObject:[[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil] autorelease]];
@@ -90,7 +91,7 @@
 
 - (void)sortOrderControlChanged:(UISegmentedControl *)control
 {
-  
+  [self.tableModel setSortOrder:control.selectedSegmentIndex];
 }
 
 #pragma mark -

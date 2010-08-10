@@ -9,13 +9,19 @@
 #import "SimpleTableModel.h"
 #import "LRTableModelEvent.h"
 
+@interface SimpleTableModel ()
+- (NSArray *)sortedObjects;
+@end
 
 @implementation SimpleTableModel
+
+@synthesize sortOrder;
 
 - (id)initWithCellProvider:(id<LRTableModelCellProvider>)theCellProvider;
 {
   if (self = [super initWithCellProvider:theCellProvider]) {
     objects = [[NSMutableArray alloc] init];
+    sortOrder = SortOrderUnordered;
   }
   return self;
 }
@@ -24,6 +30,21 @@
 {
   [objects release];
   [super dealloc];
+}
+
+- (NSArray *)sortedObjects
+{
+  if (sortOrder == SortOrderUnordered) {
+    return objects;
+  }
+  NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"title" ascending:(sortOrder == SortOrderAscending)];
+  return [objects sortedArrayUsingDescriptors:[NSArray arrayWithObject:sortDescriptor]];
+}
+
+- (void)setSortOrder:(SortOrder)newSortOrder
+{
+  sortOrder = newSortOrder;
+  [self notifyListeners:[LRTableModelEvent refreshed]];
 }
 
 - (void)addObject:(id)anObject;
@@ -71,7 +92,7 @@
 
 - (id)objectAtIndexPath:(NSIndexPath *)indexPath;
 {
-  return [objects objectAtIndex:indexPath.row];
+  return [[self sortedObjects] objectAtIndex:indexPath.row];
 }
 
 @end
