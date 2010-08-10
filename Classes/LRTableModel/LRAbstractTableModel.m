@@ -11,6 +11,13 @@
 
 @implementation LRAbstractTableModel
 
+@synthesize cellProvider;
+
+- (id)init
+{
+  return [self initWithCellProvider:nil];
+}
+
 - (id)initWithCellProvider:(id<LRTableModelCellProvider>)theCellProvider;
 {
   if (self = [super init]) {

@@ -10,5 +10,13 @@
 		<key>controller</key>
 		<string>SimpleTableViewController</string>
 	</dict>
+	<dict>
+		<key>name</key>
+		<string>SearchTableModel</string>
+		<key>description</key>
+		<string>Using a table model to implement search</string>
+		<key>controller</key>
+		<string>SearchTableViewController</string>
+	</dict>
 </array>
 </plist>

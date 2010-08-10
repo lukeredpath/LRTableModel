@@ -13,5 +13,8 @@
   NSMutableArray *eventListeners;
   id<LRTableModelCellProvider> cellProvider;
 }
+@property (nonatomic, retain) IBOutlet id<LRTableModelCellProvider> cellProvider;
+
 - (void)notifyListeners:(LRTableModelEvent *)event;
+- (id)initWithCellProvider:(id<LRTableModelCellProvider>)theCellProvider;
 @end

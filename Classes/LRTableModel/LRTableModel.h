@@ -12,7 +12,6 @@
 
 @protocol LRTableModel <UITableViewDataSource>
 
-- (id)initWithCellProvider:(id<LRTableModelCellProvider>)theCellProvider;
 - (NSInteger)numberOfSections;
 - (NSInteger)numberOfRows;
 - (id)objectAtIndexPath:(NSIndexPath *)indexPath;

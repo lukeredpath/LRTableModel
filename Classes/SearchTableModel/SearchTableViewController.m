@@ -15,10 +15,20 @@
 
 @synthesize searchTableModel;
 
+- (id)init
+{
+  return [self initWithNibName:@"SearchTableViewController" bundle:nil];
+}
+
 - (void)dealloc
 {
   [searchTableModel release];
   [super dealloc];
+}
+
+- (void)awakeFromNib
+{
+  [self.searchTableModel addTableModelListener:self];
 }
 
 - (void)viewDidLoad
