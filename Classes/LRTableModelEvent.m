@@ -29,6 +29,11 @@
   [super dealloc];
 }
 
+- (NSArray *)indexPaths;
+{
+  return [NSArray arrayWithObject:indexPath];
+}
+
 - (NSString *)description
 {
   NSString *eventType = nil;

@@ -70,6 +70,9 @@ NSArray *plistData()
     case LRTableModelRefreshEvent:
       [self.tableView reloadData];
       break;
+    case LRTableModelInsertEvent:
+      [self.tableView insertRowsAtIndexPaths:changeEvent.indexPaths withRowAnimation:UITableViewRowAnimationTop];
+      break;
     default:
       [self.tableView reloadData];
       break;

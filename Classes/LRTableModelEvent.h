@@ -24,6 +24,7 @@ typedef enum {
 
 - (id)initWithEventType:(LRTableModelEventType)eventType indexPath:(NSIndexPath *)theIndexPath;
 - (BOOL)isEqualToEvent:(LRTableModelEvent *)otherEvent;
+- (NSArray *)indexPaths;
 + (id)insertionAtRow:(NSInteger)row;
 + (id)updatedRow:(NSInteger)row;
 + (id)deletedRow:(NSInteger)row;
