@@ -12,10 +12,24 @@
 
 @implementation SimpleTableViewController
 
+NSArray *plistData()
+{
+  return [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"repositories" ofType:@"plist"]];
+}
+
 - (void)dealloc 
 {
   [tableModel release];
   [super dealloc];
+}
+
+- (SimpleTableModel *)tableModel
+{
+  if (tableModel == nil) {
+    tableModel = [[SimpleTableModel alloc] initWithCellProvider:self];
+    [tableModel addTableModelListener:self];
+  }
+  return tableModel;
 }
 
 - (void)viewDidLoad
@@ -24,23 +38,20 @@
   
   self.title = @"Simple Table View";
   self.tableView.rowHeight = 65;
-  
-  tableModel = [[SimpleTableModel alloc] init];
-  [tableModel addTableModelListener:self];
-  
-  cellProvider = self;
-  
-  NSArray *repositoriesFromPlist = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"repositories" ofType:@"plist"]];
+  self.tableView.dataSource = self.tableModel;
   
   NSMutableArray *objects = [NSMutableArray array];
-  [repositoriesFromPlist enumerateObjectsUsingBlock:^(id repository, NSUInteger idx, BOOL *stop) {
+  [plistData() enumerateObjectsUsingBlock:^(id repository, NSUInteger idx, BOOL *stop) {
     SimpleObject *object = [[SimpleObject alloc] initWithTitle:[repository objectForKey:@"name"] description:[repository objectForKey:@"description"]];
     [objects addObject:object];
     [object release];
   }];
   
-  [tableModel setObjects:objects];
+  [self.tableModel setObjects:objects];
 }
+
+#pragma mark -
+#pragma mark LRTableModelEventListener methods
 
 - (void)tableModelChanged:(LRTableModelEvent *)changeEvent
 {
@@ -53,6 +64,9 @@
       break;
   }
 }
+
+#pragma mark -
+#pragma mark LRTableModelCellProvider methods
 
 - (NSString *)cellReuseIdentifierForIndexPath:(NSIndexPath *)indexPath;
 {
@@ -72,31 +86,6 @@
   cell.detailTextLabel.numberOfLines = 2;
   cell.textLabel.text = simpleObject.title;
   cell.detailTextLabel.text = simpleObject.description;
-}
-
-#pragma mark Table View Methods
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-  NSString *reuseIdentifier = [cellProvider cellReuseIdentifierForIndexPath:indexPath];
-  
-  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
-  if (cell == nil) {
-    cell = [cellProvider cellForObjectAtIndexPath:indexPath reuseIdentifier:reuseIdentifier];
-  }
-  [cellProvider configureCell:cell forObject:[tableModel objectAtIndexPath:indexPath] atIndexPath:indexPath];
-  
-  return cell;
-}
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-  return [tableModel numberOfSections];
-}
-
-- (NSInteger)tableView:(UITableView *)table numberOfRowsInSection:(NSInteger)section
-{
-  return [tableModel numberOfRows];
 }
 
 @end

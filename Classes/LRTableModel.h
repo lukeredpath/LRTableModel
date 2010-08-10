@@ -8,9 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "LRTableModelEventListener.h"
+#import "LRTableModelCellProvider.h"
 
-@protocol LRTableModel
+@protocol LRTableModel <UITableViewDataSource>
 
+- (id)initWithCellProvider:(id<LRTableModelCellProvider>)theCellProvider;
 - (NSInteger)numberOfSections;
 - (NSInteger)numberOfRows;
 - (id)objectAtIndexPath:(NSIndexPath *)indexPath;

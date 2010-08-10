@@ -48,7 +48,7 @@ describe(@"SimpleTableModel", ^{
   __block LRMockery *context = [[LRMockery mockeryForTestCase:self] retain];
   
   beforeEach(^{
-    model = [[SimpleTableModel alloc] init];
+    model = [[SimpleTableModel alloc] initWithCellProvider:nil];
   });
   
   context(@"with a single object", ^{

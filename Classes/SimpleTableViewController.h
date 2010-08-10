@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+
 #import "LRTableModelEventListener.h"
 #import "LRTableModelCellProvider.h"
 
@@ -14,6 +15,6 @@
 
 @interface SimpleTableViewController : UITableViewController <LRTableModelEventListener, LRTableModelCellProvider> {
   SimpleTableModel *tableModel;
-  id<LRTableModelCellProvider> cellProvider;
 }
+@property (nonatomic, readonly) SimpleTableModel *tableModel;
 @end

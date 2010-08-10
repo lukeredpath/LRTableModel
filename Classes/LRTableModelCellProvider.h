@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 
-@protocol LRTableModelCellProvider
+@protocol LRTableModelCellProvider <NSObject>
 
 - (NSString *)cellReuseIdentifierForIndexPath:(NSIndexPath *)indexPath;
 - (UITableViewCell *)cellForObjectAtIndexPath:(NSIndexPath *)indexPath reuseIdentifier:(NSString *)reuseIdentifier;
