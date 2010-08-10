@@ -82,12 +82,6 @@ NSArray *plistData()
 #pragma mark -
 #pragma mark LRTableModelCellProvider methods
 
-- (NSString *)cellReuseIdentifierForIndexPath:(NSIndexPath *)indexPath;
-{
-  static NSString *identifier = @"CellIdentifier";
-  return identifier;
-}
-
 - (UITableViewCell *)cellForObjectAtIndexPath:(NSIndexPath *)indexPath reuseIdentifier:(NSString *)reuseIdentifier
 {
   return [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:reuseIdentifier] autorelease];

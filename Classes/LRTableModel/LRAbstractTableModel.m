@@ -64,7 +64,11 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-  NSString *reuseIdentifier = [cellProvider cellReuseIdentifierForIndexPath:indexPath];
+  static NSString *reuseIdentifier = @"LRGenericCellIdentifier";
+  
+  if ([cellProvider respondsToSelector:@selector(cellReuseIdentifierForIndexPath:)]) {
+    reuseIdentifier = [cellProvider cellReuseIdentifierForIndexPath:indexPath];
+  }  
   
   UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
   if (cell == nil) {

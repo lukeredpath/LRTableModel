@@ -83,11 +83,6 @@
   [self.tableView reloadData];
 }
 
-- (NSString *)cellReuseIdentifierForIndexPath:(NSIndexPath *)indexPath
-{
-  return @"ExampleCell";
-}
-
 - (UITableViewCell *)cellForObjectAtIndexPath:(NSIndexPath *)indexPath reuseIdentifier:(NSString *)reuseIdentifier
 {
   return [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:reuseIdentifier] autorelease];
