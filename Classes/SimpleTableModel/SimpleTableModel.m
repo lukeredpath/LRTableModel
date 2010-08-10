@@ -9,26 +9,19 @@
 #import "SimpleTableModel.h"
 #import "LRTableModelEvent.h"
 
-@interface SimpleTableModel ()
-- (void)notifyListeners:(LRTableModelEvent *)event;
-@end
 
 @implementation SimpleTableModel
 
 - (id)initWithCellProvider:(id<LRTableModelCellProvider>)theCellProvider;
 {
-  if (self = [super init]) {
+  if (self = [super initWithCellProvider:theCellProvider]) {
     objects = [[NSMutableArray alloc] init];
-    eventListeners = [[NSMutableArray alloc] init];
-    cellProvider = [theCellProvider retain];
   }
   return self;
 }
 
 - (void)dealloc
 {
-  [cellProvider release];
-  [eventListeners release];
   [objects release];
   [super dealloc];
 }
@@ -71,11 +64,6 @@
 #pragma mark -
 #pragma mark LRTableModel methods
 
-- (NSInteger)numberOfSections;
-{
-  return 1;
-}
-
 - (NSInteger)numberOfRows;
 {
   return [objects count]; 
@@ -84,49 +72,6 @@
 - (id)objectAtIndexPath:(NSIndexPath *)indexPath;
 {
   return [objects objectAtIndex:indexPath.row];
-}
-
-- (void)addTableModelListener:(id<LRTableModelEventListener>)listener;
-{
-  [eventListeners addObject:listener];
-}
-
-- (void)removeTableModelListener:(id<LRTableModelEventListener>)listener;
-{
-  [eventListeners removeObject:listener];
-}
-
-- (void)notifyListeners:(LRTableModelEvent *)event;
-{
-  for (id<LRTableModelEventListener> listener in eventListeners) {
-    [listener tableModelChanged:event];
-  }
-}
-
-#pragma mark -
-#pragma mark UITableViewDataSource methods
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-  NSString *reuseIdentifier = [cellProvider cellReuseIdentifierForIndexPath:indexPath];
-  
-  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
-  if (cell == nil) {
-    cell = [cellProvider cellForObjectAtIndexPath:indexPath reuseIdentifier:reuseIdentifier];
-  }
-  [cellProvider configureCell:cell forObject:[self objectAtIndexPath:indexPath] atIndexPath:indexPath];
-  
-  return cell;
-}
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-  return [self numberOfSections];
-}
-
-- (NSInteger)tableView:(UITableView *)table numberOfRowsInSection:(NSInteger)section
-{
-  return [self numberOfRows];
 }
 
 @end

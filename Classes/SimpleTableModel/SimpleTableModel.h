@@ -7,8 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "LRTableModel.h"
-#import "LRTableModelCellProvider.h"
+#import "LRAbstractTableModel.h"
 
 /*
  SimpleTableModel is probably the most basic implementation of LRTableModel possible.
@@ -37,10 +36,9 @@
  More examples to come soon.
  */
 
-@interface SimpleTableModel : NSObject <LRTableModel> {
+@interface SimpleTableModel : LRAbstractTableModel 
+{
   NSMutableArray *objects;
-  NSMutableArray *eventListeners;
-  id<LRTableModelCellProvider> cellProvider;
 }
 - (void)addObject:(id)anObject;
 - (void)removeObject:(id)anObject;
