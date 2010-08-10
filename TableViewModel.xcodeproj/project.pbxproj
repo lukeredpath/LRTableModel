@@ -19,6 +19,12 @@
 		A3D4949B1210B6A90076940C /* SimpleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D494881210B6540076940C /* SimpleTableViewController.m */; };
 		A3D494B61210BA4A0076940C /* repositories.plist in Resources */ = {isa = PBXBuildFile; fileRef = A3D494B51210BA4A0076940C /* repositories.plist */; };
 		A3D494BB1210BB1F0076940C /* SimpleObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D494B11210B7370076940C /* SimpleObject.m */; };
+		A3D494E81210BE1E0076940C /* SimpleTableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D494E71210BE1E0076940C /* SimpleTableModel.m */; };
+		A3D494E91210BE2E0076940C /* SimpleTableViewModelTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D494E41210BE130076940C /* SimpleTableViewModelTest.m */; };
+		A3D494EC1210BE390076940C /* SimpleTableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D494E71210BE1E0076940C /* SimpleTableModel.m */; };
+		A3D4953D1210C1E70076940C /* LRTableModelEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D4953C1210C1E70076940C /* LRTableModelEvent.m */; };
+		A3D4953E1210C1F50076940C /* LRTableModelEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D4953C1210C1E70076940C /* LRTableModelEvent.m */; };
+		A3D4959E1210C6190076940C /* HCPassesBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D4959D1210C6190076940C /* HCPassesBlock.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,63 +32,63 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = A3D492681210AA210076940C /* Tests */;
+			remoteGlobalIDString = A3D492681210AA210076940C;
 			remoteInfo = Tests;
 		};
 		A3D4935A1210AC280076940C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A3D493511210AC270076940C /* Mocky.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = D2AAC07E0554694100DB518D /* libMocky.a */;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
 			remoteInfo = Mocky;
 		};
 		A3D4935C1210AC280076940C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A3D493511210AC270076940C /* Mocky.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = A3464E7E11F279020080B46B /* Tests.octest */;
+			remoteGlobalIDString = A3464E7E11F279020080B46B;
 			remoteInfo = Tests;
 		};
 		A3D4935E1210AC280076940C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A3D493511210AC270076940C /* Mocky.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = A36FDBB411FFBB6E004A08F4 /* Example Tests.octest */;
+			remoteGlobalIDString = A36FDBB411FFBB6E004A08F4;
 			remoteInfo = "Example Tests";
 		};
 		A3D4938B1210AC440076940C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A3D493821210AC440076940C /* Kiwi.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 1D6058910D05DD3D006BFB54 /* KiwiDriver.app */;
+			remoteGlobalIDString = 1D6058910D05DD3D006BFB54;
 			remoteInfo = KiwiDriver;
 		};
 		A3D4938D1210AC440076940C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A3D493821210AC440076940C /* Kiwi.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = F5015B9F11583A77002E9A98 /* libKiwi.a */;
+			remoteGlobalIDString = F5015B9F11583A77002E9A98;
 			remoteInfo = Kiwi;
 		};
 		A3D4938F1210AC440076940C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A3D493821210AC440076940C /* Kiwi.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = F5015C9E11584017002E9A98 /* KiwiTests.octest */;
+			remoteGlobalIDString = F5015C9E11584017002E9A98;
 			remoteInfo = KiwiTests;
 		};
 		A3D493911210AC570076940C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A3D493821210AC440076940C /* Kiwi.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = F5015B9E11583A77002E9A98 /* Kiwi */;
+			remoteGlobalIDString = F5015B9E11583A77002E9A98;
 			remoteInfo = Kiwi;
 		};
 		A3D493931210AC570076940C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A3D493511210AC270076940C /* Mocky.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = D2AAC07D0554694100DB518D /* Mocky */;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
 			remoteInfo = Mocky;
 		};
 /* End PBXContainerItemProxy section */
@@ -109,6 +115,15 @@
 		A3D494B01210B7370076940C /* SimpleObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleObject.h; sourceTree = "<group>"; };
 		A3D494B11210B7370076940C /* SimpleObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleObject.m; sourceTree = "<group>"; };
 		A3D494B51210BA4A0076940C /* repositories.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = repositories.plist; path = Resources/repositories.plist; sourceTree = "<group>"; };
+		A3D494DE1210BCEB0076940C /* LRTableModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRTableModel.h; sourceTree = "<group>"; };
+		A3D494DF1210BD940076940C /* LRTableModelEventListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRTableModelEventListener.h; sourceTree = "<group>"; };
+		A3D494E41210BE130076940C /* SimpleTableViewModelTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleTableViewModelTest.m; sourceTree = "<group>"; };
+		A3D494E61210BE1E0076940C /* SimpleTableModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleTableModel.h; sourceTree = "<group>"; };
+		A3D494E71210BE1E0076940C /* SimpleTableModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleTableModel.m; sourceTree = "<group>"; };
+		A3D4953B1210C1E70076940C /* LRTableModelEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRTableModelEvent.h; sourceTree = "<group>"; };
+		A3D4953C1210C1E70076940C /* LRTableModelEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRTableModelEvent.m; sourceTree = "<group>"; };
+		A3D4959C1210C6190076940C /* HCPassesBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCPassesBlock.h; sourceTree = "<group>"; };
+		A3D4959D1210C6190076940C /* HCPassesBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCPassesBlock.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,12 +152,15 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A3D494DD1210BCD10076940C /* LRTableViewModel */,
 				1D3623240D0F684500981E51 /* TableViewModelAppDelegate.h */,
 				1D3623250D0F684500981E51 /* TableViewModelAppDelegate.m */,
 				A3D494871210B6540076940C /* SimpleTableViewController.h */,
 				A3D494881210B6540076940C /* SimpleTableViewController.m */,
 				A3D494B01210B7370076940C /* SimpleObject.h */,
 				A3D494B11210B7370076940C /* SimpleObject.m */,
+				A3D494E61210BE1E0076940C /* SimpleTableModel.h */,
+				A3D494E71210BE1E0076940C /* SimpleTableModel.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -203,31 +221,17 @@
 		A3D492721210AA590076940C /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				A3D492731210AA590076940C /* Acceptance */,
-				A3D492741210AA590076940C /* Integration */,
 				A3D492751210AA590076940C /* Support */,
 				A3D492761210AA590076940C /* Unit */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
 		};
-		A3D492731210AA590076940C /* Acceptance */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Acceptance;
-			sourceTree = "<group>";
-		};
-		A3D492741210AA590076940C /* Integration */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Integration;
-			sourceTree = "<group>";
-		};
 		A3D492751210AA590076940C /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				A3D4959C1210C6190076940C /* HCPassesBlock.h */,
+				A3D4959D1210C6190076940C /* HCPassesBlock.m */,
 				A3D492791210AA7E0076940C /* TestHelper.h */,
 				A3D492821210AB0C0076940C /* TestHelper.m */,
 			);
@@ -237,6 +241,7 @@
 		A3D492761210AA590076940C /* Unit */ = {
 			isa = PBXGroup;
 			children = (
+				A3D494E41210BE130076940C /* SimpleTableViewModelTest.m */,
 			);
 			path = Unit;
 			sourceTree = "<group>";
@@ -268,6 +273,17 @@
 				A3D493901210AC440076940C /* KiwiTests.octest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		A3D494DD1210BCD10076940C /* LRTableViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A3D494DE1210BCEB0076940C /* LRTableModel.h */,
+				A3D494DF1210BD940076940C /* LRTableModelEventListener.h */,
+				A3D4953B1210C1E70076940C /* LRTableModelEvent.h */,
+				A3D4953C1210C1E70076940C /* LRTableModelEvent.m */,
+			);
+			name = LRTableViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -428,6 +444,8 @@
 				1D3623260D0F684500981E51 /* TableViewModelAppDelegate.m in Sources */,
 				A3D4949B1210B6A90076940C /* SimpleTableViewController.m in Sources */,
 				A3D494BB1210BB1F0076940C /* SimpleObject.m in Sources */,
+				A3D494E81210BE1E0076940C /* SimpleTableModel.m in Sources */,
+				A3D4953D1210C1E70076940C /* LRTableModelEvent.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +454,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3D492831210AB0C0076940C /* TestHelper.m in Sources */,
+				A3D494E91210BE2E0076940C /* SimpleTableViewModelTest.m in Sources */,
+				A3D494EC1210BE390076940C /* SimpleTableModel.m in Sources */,
+				A3D4953E1210C1F50076940C /* LRTableModelEvent.m in Sources */,
+				A3D4959E1210C6190076940C /* HCPassesBlock.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

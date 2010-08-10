@@ -12,3 +12,5 @@
 #import "Kiwi.h"
 #import "LRMocky.h"
 #import "OCHamcrest.h"
+
+#import "HCPassesBlock.h"
