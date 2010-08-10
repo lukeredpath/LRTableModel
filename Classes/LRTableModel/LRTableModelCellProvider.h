@@ -11,10 +11,10 @@
 
 @protocol LRTableModelCellProvider <NSObject>
 
-- (UITableViewCell *)cellForObjectAtIndexPath:(NSIndexPath *)indexPath reuseIdentifier:(NSString *)reuseIdentifier;
 - (void)configureCell:(UITableViewCell *)cell forObject:(id)object atIndexPath:(NSIndexPath *)indexPath;
 
 @optional
+- (UITableViewCell *)cellForObjectAtIndexPath:(NSIndexPath *)indexPath reuseIdentifier:(NSString *)reuseIdentifier;
 - (NSString *)cellReuseIdentifierForIndexPath:(NSIndexPath *)indexPath;
 
 @end

@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "LRTableModel.h"
 
-@interface LRAbstractTableModel : NSObject <LRTableModel> {
+@interface LRAbstractTableModel : NSObject <LRTableModel, UITableViewDataSource> {
   NSMutableArray *eventListeners;
   id<LRTableModelCellProvider> cellProvider;
 }
