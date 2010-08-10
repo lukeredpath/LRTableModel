@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "LRTableModelEventListener.h"
+#import "LRTableModelCellProvider.h"
 
 @class SimpleTableModel;
 
-@interface SimpleTableViewController : UITableViewController <LRTableModelEventListener> {
+@interface SimpleTableViewController : UITableViewController <LRTableModelEventListener, LRTableModelCellProvider> {
   SimpleTableModel *tableModel;
+  id<LRTableModelCellProvider> cellProvider;
 }
 @end

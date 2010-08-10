@@ -8,10 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import "LRTableModel.h"
+#import "LRTableModelCellProvider.h"
 
 @interface SimpleTableModel : NSObject <LRTableModel> {
   NSMutableArray *objects;
   NSMutableArray *eventListeners;
+  id<LRTableModelCellProvider> cellProvider;
 }
 - (void)addObject:(id)anObject;
 - (void)removeObject:(id)anObject;

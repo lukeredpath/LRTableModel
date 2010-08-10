@@ -28,6 +28,8 @@
   tableModel = [[SimpleTableModel alloc] init];
   [tableModel addTableModelListener:self];
   
+  cellProvider = self;
+  
   NSArray *repositoriesFromPlist = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"repositories" ofType:@"plist"]];
   
   NSMutableArray *objects = [NSMutableArray array];
@@ -52,22 +54,37 @@
   }
 }
 
+- (NSString *)cellReuseIdentifierForIndexPath:(NSIndexPath *)indexPath;
+{
+  static NSString *identifier = @"CellIdentifier";
+  return identifier;
+}
+
+- (UITableViewCell *)cellForObjectAtIndexPath:(NSIndexPath *)indexPath reuseIdentifier:(NSString *)reuseIdentifier
+{
+  return [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:reuseIdentifier] autorelease];
+}
+
+- (void)configureCell:(UITableViewCell *)cell forObject:(id)object atIndexPath:(NSIndexPath *)indexPath
+{
+  SimpleObject *simpleObject = object;
+  
+  cell.detailTextLabel.numberOfLines = 2;
+  cell.textLabel.text = simpleObject.title;
+  cell.detailTextLabel.text = simpleObject.description;
+}
+
 #pragma mark Table View Methods
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-  static NSString *identifier = @"CellIdentifier";
+  NSString *reuseIdentifier = [cellProvider cellReuseIdentifierForIndexPath:indexPath];
   
-  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
   if (cell == nil) {
-    cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:identifier] autorelease];
+    cell = [cellProvider cellForObjectAtIndexPath:indexPath reuseIdentifier:reuseIdentifier];
   }
-  cell.detailTextLabel.numberOfLines = 2;
-  
-  SimpleObject *object = [tableModel objectAtIndexPath:indexPath];
-
-  cell.textLabel.text = object.title;
-  cell.detailTextLabel.text = object.description;
+  [cellProvider configureCell:cell forObject:[tableModel objectAtIndexPath:indexPath] atIndexPath:indexPath];
   
   return cell;
 }

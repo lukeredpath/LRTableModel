@@ -124,6 +124,7 @@
 		A3D4953C1210C1E70076940C /* LRTableModelEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRTableModelEvent.m; sourceTree = "<group>"; };
 		A3D4959C1210C6190076940C /* HCPassesBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCPassesBlock.h; sourceTree = "<group>"; };
 		A3D4959D1210C6190076940C /* HCPassesBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCPassesBlock.m; sourceTree = "<group>"; };
+		A3D497981210D89A0076940C /* LRTableModelCellProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRTableModelCellProvider.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -282,6 +283,7 @@
 				A3D494DF1210BD940076940C /* LRTableModelEventListener.h */,
 				A3D4953B1210C1E70076940C /* LRTableModelEvent.h */,
 				A3D4953C1210C1E70076940C /* LRTableModelEvent.m */,
+				A3D497981210D89A0076940C /* LRTableModelCellProvider.h */,
 			);
 			name = LRTableViewModel;
 			sourceTree = "<group>";
