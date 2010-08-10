@@ -32,6 +32,11 @@
   [super dealloc];
 }
 
+/*
+ * Performance note: calculating sorted objects for every call is going to be expensive
+ * especially if you have a large list of objects. This is a basic, naive implementation;
+ * a real implementation would probably consider some kind of cached sort. 
+ */
 - (NSArray *)sortedObjects
 {
   if (sortOrder == SortOrderUnordered) {
