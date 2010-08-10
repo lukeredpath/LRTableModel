@@ -17,6 +17,11 @@
 		A32C9BB81211BC5800BBE14A /* ExamplesIndexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A32C9B861211B8E100BBE14A /* ExamplesIndexViewController.m */; };
 		A32C9BC11211BC6D00BBE14A /* LRAbstractTableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A32C9B891211B9C100BBE14A /* LRAbstractTableModel.m */; };
 		A32C9BCC1211BC8C00BBE14A /* Examples.plist in Resources */ = {isa = PBXBuildFile; fileRef = A32C9B9F1211BB6400BBE14A /* Examples.plist */; };
+		A32C9C031211BF6800BBE14A /* SearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A32C9C011211BF6800BBE14A /* SearchTableViewController.m */; };
+		A32C9C041211BF6800BBE14A /* SearchTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A32C9C021211BF6800BBE14A /* SearchTableViewController.xib */; };
+		A32C9C101211C02100BBE14A /* GithubRepositories.m in Sources */ = {isa = PBXBuildFile; fileRef = A32C9C0A1211BFE200BBE14A /* GithubRepositories.m */; };
+		A32C9C211211C08200BBE14A /* SearchTableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A32C9C201211C08200BBE14A /* SearchTableModel.m */; };
+		A32C9C241211C09700BBE14A /* GithubRepositories.m in Sources */ = {isa = PBXBuildFile; fileRef = A32C9C0A1211BFE200BBE14A /* GithubRepositories.m */; };
 		A3D492831210AB0C0076940C /* TestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D492821210AB0C0076940C /* TestHelper.m */; };
 		A3D4939B1210ACA60076940C /* libKiwi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D4938E1210AC440076940C /* libKiwi.a */; };
 		A3D4939D1210ACAF0076940C /* libMocky.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D4935B1210AC280076940C /* libMocky.a */; };
@@ -114,6 +119,13 @@
 		A32C9B881211B9C100BBE14A /* LRAbstractTableModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRAbstractTableModel.h; sourceTree = "<group>"; };
 		A32C9B891211B9C100BBE14A /* LRAbstractTableModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRAbstractTableModel.m; sourceTree = "<group>"; };
 		A32C9B9F1211BB6400BBE14A /* Examples.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Examples.plist; sourceTree = "<group>"; };
+		A32C9C001211BF6800BBE14A /* SearchTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTableViewController.h; sourceTree = "<group>"; };
+		A32C9C011211BF6800BBE14A /* SearchTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTableViewController.m; sourceTree = "<group>"; };
+		A32C9C021211BF6800BBE14A /* SearchTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SearchTableViewController.xib; path = Classes/SearchTableModel/SearchTableViewController.xib; sourceTree = "<group>"; };
+		A32C9C091211BFE200BBE14A /* GithubRepositories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GithubRepositories.h; sourceTree = "<group>"; };
+		A32C9C0A1211BFE200BBE14A /* GithubRepositories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GithubRepositories.m; sourceTree = "<group>"; };
+		A32C9C1F1211C08200BBE14A /* SearchTableModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTableModel.h; sourceTree = "<group>"; };
+		A32C9C201211C08200BBE14A /* SearchTableModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTableModel.m; sourceTree = "<group>"; };
 		A3D492691210AA210076940C /* Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3D4926A1210AA210076940C /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
 		A3D492791210AA7E0076940C /* TestHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestHelper.h; sourceTree = "<group>"; };
@@ -169,6 +181,8 @@
 				1D3623250D0F684500981E51 /* TableViewModelAppDelegate.m */,
 				A32C9B851211B8E100BBE14A /* ExamplesIndexViewController.h */,
 				A32C9B861211B8E100BBE14A /* ExamplesIndexViewController.m */,
+				A32C9C091211BFE200BBE14A /* GithubRepositories.h */,
+				A32C9C0A1211BFE200BBE14A /* GithubRepositories.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -211,6 +225,7 @@
 			children = (
 				A3D494B51210BA4A0076940C /* repositories.plist */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
+				A32C9C021211BF6800BBE14A /* SearchTableViewController.xib */,
 				8D1107310486CEB800E47090 /* TableViewModel-Info.plist */,
 				A32C9B9F1211BB6400BBE14A /* Examples.plist */,
 			);
@@ -225,6 +240,17 @@
 				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A32C9BFF1211BF4000BBE14A /* SearchTableModel */ = {
+			isa = PBXGroup;
+			children = (
+				A32C9C001211BF6800BBE14A /* SearchTableViewController.h */,
+				A32C9C011211BF6800BBE14A /* SearchTableViewController.m */,
+				A32C9C1F1211C08200BBE14A /* SearchTableModel.h */,
+				A32C9C201211C08200BBE14A /* SearchTableModel.m */,
+			);
+			path = SearchTableModel;
 			sourceTree = "<group>";
 		};
 		A3D492721210AA590076940C /* Tests */ = {
@@ -314,6 +340,7 @@
 		A3D498091210E0780076940C /* Examples */ = {
 			isa = PBXGroup;
 			children = (
+				A32C9BFF1211BF4000BBE14A /* SearchTableModel */,
 				A3D497FB1210E0670076940C /* SimpleTableModel */,
 			);
 			name = Examples;
@@ -448,6 +475,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A32C9C041211BF6800BBE14A /* SearchTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,6 +510,7 @@
 				A3D498141210E0A10076940C /* LRTableModelEvent.m in Sources */,
 				A32C9BB81211BC5800BBE14A /* ExamplesIndexViewController.m in Sources */,
 				A32C9BC11211BC6D00BBE14A /* LRAbstractTableModel.m in Sources */,
+				A32C9C101211C02100BBE14A /* GithubRepositories.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,6 +525,9 @@
 				A3D498171210E0A70076940C /* SimpleTableModel.m in Sources */,
 				A3D498181210E0AA0076940C /* SimpleObject.m in Sources */,
 				A32C9B8A1211B9C100BBE14A /* LRAbstractTableModel.m in Sources */,
+				A32C9C031211BF6800BBE14A /* SearchTableViewController.m in Sources */,
+				A32C9C211211C08200BBE14A /* SearchTableModel.m in Sources */,
+				A32C9C241211C09700BBE14A /* GithubRepositories.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

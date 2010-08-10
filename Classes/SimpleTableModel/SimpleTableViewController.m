@@ -9,13 +9,9 @@
 #import "SimpleTableViewController.h"
 #import "SimpleObject.h"
 #import "SimpleTableModel.h"
+#import "GithubRepositories.h"
 
 @implementation SimpleTableViewController
-
-NSArray *plistData()
-{
-  return [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"repositories" ofType:@"plist"]];
-}
 
 - (void)dealloc 
 {
@@ -45,7 +41,7 @@ NSArray *plistData()
   [addButton release];
   
   NSMutableArray *objects = [NSMutableArray array];
-  [plistData() enumerateObjectsUsingBlock:^(id repository, NSUInteger idx, BOOL *stop) {
+  [[GithubRepositories exampleRepositories] enumerateObjectsUsingBlock:^(id repository, NSUInteger idx, BOOL *stop) {
     SimpleObject *object = [[SimpleObject alloc] initWithTitle:[repository objectForKey:@"name"] description:[repository objectForKey:@"description"]];
     [objects addObject:object];
     [object release];
