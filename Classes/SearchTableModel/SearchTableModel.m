@@ -58,7 +58,6 @@ NSPredicate *predicateForPrefix(NSString *prefix)
 {
   [filteredObjects release];
   filteredObjects = [[objects filteredArrayUsingPredicate:predicateForPrefix(prefix)] retain];
-  [self notifyListeners:[LRTableModelEvent refreshed]];
 }
 
 - (void)clearSearchFilter;
