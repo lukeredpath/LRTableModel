@@ -42,6 +42,10 @@ All of the work here is based on the TableModel interface that powers the Java S
 
 This project is an exploration of that concept with the hope that it might evolve into something generally useful.
 
+## Further benefits: easier unit testing
+
+By implementing most of your table update logic in the TableModel, with the controller simply responding to these changes by reloading the table view one way or another, it becomes possible to unit test your table model code independently of the UITableView. The SimpleTableViewModelTest test shows how easy this is, using a mock event listener.
+
 ## A brief overview of the different components
 
 The core of LRTableModel is a series of protocols which your application needs to implement. They are:
