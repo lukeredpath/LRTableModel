@@ -34,7 +34,7 @@ If you want to check the project out and build it, you'll need to make sure you 
 
 ## A missing abstraction?
 
-Having implemented far too many UITableViewControllers in the same repetitive fashion, I started to wonder if there was a missing abstraction that should sit between your domain model and the UITableView's data source. Something that responds to events in your domain's language (e.g. receive a new tweet, delete a contact), which may or may not be the result of user input (perhaps the Tweet may have arrived from the Twitter streaming API), and publishes events in response to these that speak the language of UITableView: row has been inserted, rows have been deleted etc.
+Having implemented far too many UITableViewControllers in the same repetitive fashion, I started to wonder if there was a missing abstraction that should sit between your domain model and the UITableView's data source. Something that responds to events in your domain's language (e.g. receive a new tweet, delete a contact), which may or may not be the result of user input (perhaps the Tweet arrived from the Twitter streaming API), and publishes events in response to these that speak the language of UITableView: row has been inserted, rows have been deleted etc.
 
 ## Implementing the concept of a table model
 
