@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LRTableModelEventListener.h"
 
+@class SimpleTableModel;
 
-@interface SimpleTableViewController : UITableViewController {
-  NSMutableArray *objects;
+@interface SimpleTableViewController : UITableViewController <LRTableModelEventListener> {
+  SimpleTableModel *tableModel;
 }
 @end

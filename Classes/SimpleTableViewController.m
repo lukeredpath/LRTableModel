@@ -8,12 +8,13 @@
 
 #import "SimpleTableViewController.h"
 #import "SimpleObject.h"
+#import "SimpleTableModel.h"
 
 @implementation SimpleTableViewController
 
 - (void)dealloc 
 {
-  [objects release];
+  [tableModel release];
   [super dealloc];
 }
 
@@ -24,16 +25,31 @@
   self.title = @"Simple Table View";
   self.tableView.rowHeight = 65;
   
-  objects = [[NSMutableArray alloc] init];
+  tableModel = [[SimpleTableModel alloc] init];
+  [tableModel addTableModelListener:self];
   
   NSArray *repositoriesFromPlist = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"repositories" ofType:@"plist"]];
+  
+  NSMutableArray *objects = [NSMutableArray array];
   [repositoriesFromPlist enumerateObjectsUsingBlock:^(id repository, NSUInteger idx, BOOL *stop) {
     SimpleObject *object = [[SimpleObject alloc] initWithTitle:[repository objectForKey:@"name"] description:[repository objectForKey:@"description"]];
     [objects addObject:object];
     [object release];
   }];
   
-  [self.tableView reloadData];
+  [tableModel setObjects:objects];
+}
+
+- (void)tableModelChanged:(LRTableModelEvent *)changeEvent
+{
+  switch (changeEvent.type) {
+    case LRTableModelRefreshEvent:
+      [self.tableView reloadData];
+      break;
+    default:
+      [self.tableView reloadData];
+      break;
+  }
 }
 
 #pragma mark Table View Methods
@@ -48,7 +64,7 @@
   }
   cell.detailTextLabel.numberOfLines = 2;
   
-  SimpleObject *object = [objects objectAtIndex:indexPath.row];
+  SimpleObject *object = [tableModel objectAtIndexPath:indexPath];
 
   cell.textLabel.text = object.title;
   cell.detailTextLabel.text = object.description;
@@ -58,12 +74,12 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-  return 1;
+  return [tableModel numberOfSections];
 }
 
 - (NSInteger)tableView:(UITableView *)table numberOfRowsInSection:(NSInteger)section
 {
-  return objects.count;
+  return [tableModel numberOfRows];
 }
 
 @end

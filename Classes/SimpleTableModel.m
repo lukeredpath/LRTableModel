@@ -53,6 +53,13 @@
   [self notifyListeners:[LRTableModelEvent updatedRow:index]];
 }
 
+- (void)setObjects:(NSArray *)newObjects;
+{
+  [objects removeAllObjects];
+  [objects setArray:newObjects];
+  [self notifyListeners:[LRTableModelEvent refreshed]];
+}
+
 - (NSInteger)numberOfSections;
 {
   return 1;

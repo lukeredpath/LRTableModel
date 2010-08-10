@@ -36,6 +36,10 @@ id deleteEventAtRow(int rowIndex) {
   return LRM_with(equalTo([LRTableModelEvent deletedRow:rowIndex]));
 }
 
+id refreshEvent() {
+  return LRM_with(equalTo([LRTableModelEvent refreshed]));
+}
+
 SPEC_BEGIN(SimpleTableViewModelSpec)
 
 describe(@"SimpleTableModel", ^{
@@ -114,6 +118,14 @@ describe(@"SimpleTableModel", ^{
       }];
       
       [model removeObject:@"an object"];
+    });
+    
+    it(@"notifies the listener of a refresh when the whole data set is replaced", ^{
+      [context checking:^(LRExpectationBuilder *expects) {
+        [[expects oneOf:mockListener] tableModelChanged:refreshEvent()];
+      }];
+      
+      [model setObjects:[NSArray arrayWithObjects:@"foo", @"bar", @"baz", nil]];
     });
     
     it(@"does not notify listener when it has been removed", ^{

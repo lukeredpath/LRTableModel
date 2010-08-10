@@ -42,6 +42,9 @@
     case LRTableModelDeleteEvent:
       eventType = @"LRTableModelDeleteEvent";
       break;
+    case LRTableModelRefreshEvent:
+      eventType = @"LRTableModelRefreshEvent";
+      break;
     default:
       eventType = @"UnknownEventType";
       break;
@@ -59,6 +62,9 @@
 
 - (BOOL)isEqualToEvent:(LRTableModelEvent *)otherEvent
 {
+  if (self.indexPath == nil) {
+    return self.type == otherEvent.type;
+  }
   return [otherEvent.indexPath isEqual:self.indexPath] &&
     otherEvent.type == self.type;
 }
@@ -79,6 +85,11 @@
 {
   NSIndexPath *indexPath = [NSIndexPath indexPathForRow:row inSection:0];
   return [[[self alloc] initWithEventType:LRTableModelDeleteEvent indexPath:indexPath] autorelease];
+}
+
++ (id)refreshed;
+{
+  return [[[self alloc] initWithEventType:LRTableModelRefreshEvent indexPath:nil] autorelease];
 }
 
 @end

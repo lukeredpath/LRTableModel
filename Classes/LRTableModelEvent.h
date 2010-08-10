@@ -11,7 +11,8 @@
 typedef enum {
   LRTableModelInsertEvent = 0,
   LRTableModelUpdateEvent,
-  LRTableModelDeleteEvent
+  LRTableModelDeleteEvent,
+  LRTableModelRefreshEvent
 } LRTableModelEventType;
 
 @interface LRTableModelEvent : NSObject {
@@ -26,4 +27,5 @@ typedef enum {
 + (id)insertionAtRow:(NSInteger)row;
 + (id)updatedRow:(NSInteger)row;
 + (id)deletedRow:(NSInteger)row;
++ (id)refreshed;
 @end
