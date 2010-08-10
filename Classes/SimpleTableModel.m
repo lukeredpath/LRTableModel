@@ -62,6 +62,15 @@
   [self notifyListeners:[LRTableModelEvent refreshed]];
 }
 
+- (void)insertObject:(id)anObject atIndex:(NSInteger)index;
+{
+  [objects insertObject:anObject atIndex:index];
+  [self notifyListeners:[LRTableModelEvent insertionAtRow:index]];
+}
+
+#pragma mark -
+#pragma mark LRTableModel methods
+
 - (NSInteger)numberOfSections;
 {
   return 1;

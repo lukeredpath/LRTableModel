@@ -40,6 +40,10 @@ NSArray *plistData()
   self.tableView.rowHeight = 65;
   self.tableView.dataSource = self.tableModel;
   
+  UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addButtonTapped:)];
+  [self.navigationItem setRightBarButtonItem:addButton];
+  [addButton release];
+  
   NSMutableArray *objects = [NSMutableArray array];
   [plistData() enumerateObjectsUsingBlock:^(id repository, NSUInteger idx, BOOL *stop) {
     SimpleObject *object = [[SimpleObject alloc] initWithTitle:[repository objectForKey:@"name"] description:[repository objectForKey:@"description"]];
@@ -48,6 +52,13 @@ NSArray *plistData()
   }];
   
   [self.tableModel setObjects:objects];
+}
+
+- (void)addButtonTapped:(id)sender
+{
+  SimpleObject *object = [[SimpleObject alloc] initWithTitle:@"A new object" description:[NSString stringWithFormat:@"This was created at %@", [NSDate date]]];
+  [self.tableModel insertObject:object atIndex:0];
+  [object release];
 }
 
 #pragma mark -
