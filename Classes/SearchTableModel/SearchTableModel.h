@@ -12,5 +12,6 @@
 @interface SearchTableModel : SimpleTableModel {
   NSArray *filteredObjects;
 }
-
+- (void)filterObjectsWithPrefix:(NSString *)prefix;
+- (void)clearSearchFilter;
 @end
