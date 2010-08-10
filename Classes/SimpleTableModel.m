@@ -67,7 +67,7 @@
 
 - (NSInteger)numberOfRows;
 {
-  return 1; 
+  return [objects count]; 
 }
 
 - (id)objectAtIndexPath:(NSIndexPath *)indexPath;

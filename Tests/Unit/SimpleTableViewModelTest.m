@@ -70,6 +70,16 @@ describe(@"SimpleTableModel", ^{
     });
   });
   
+  context(@"with multiple objects", ^{
+    beforeEach(^{
+      [model setObjects:[NSArray arrayWithObjects:@"foo", @"bar", @"baz", nil]];
+    });
+    
+    it(@"should have a row for each object", ^{
+      assertThatInt([model numberOfRows], equalToInt(3));
+    });
+  });
+  
   context(@"with an event listener", ^{
     __block id mockListener = [context mock:[LRMockEventListener class]];
     
