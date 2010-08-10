@@ -11,7 +11,7 @@
 
 @class SearchTableModel;
 
-@interface SearchTableViewController : UITableViewController <LRTableModelCellProvider, LRTableModelEventListener> {
+@interface SearchTableViewController : UITableViewController <LRTableModelCellProvider, LRTableModelEventListener, UISearchDisplayDelegate> {
   SearchTableModel *searchTableModel;
 }
 @property (nonatomic, retain) IBOutlet SearchTableModel *searchTableModel;
