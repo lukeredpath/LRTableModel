@@ -10,7 +10,7 @@
 #import "LRTableModelEventListener.h"
 #import "LRTableModelCellProvider.h"
 
-@protocol LRTableModel <UITableViewDataSource>
+@protocol LRTableModel <NSObject>
 
 - (NSInteger)numberOfSections;
 - (NSInteger)numberOfRows;
