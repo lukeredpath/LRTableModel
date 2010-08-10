@@ -12,17 +12,13 @@
 @implementation TableViewModelAppDelegate
 
 @synthesize window;
-
+@synthesize navigationController;
 
 #pragma mark -
 #pragma mark Application lifecycle
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
-    
-  SimpleTableViewController *tableViewController = [[SimpleTableViewController alloc] initWithStyle:UITableViewStylePlain];
-  self.window.rootViewController = [[[UINavigationController alloc] initWithRootViewController:tableViewController] autorelease];
-	[tableViewController release];
-  
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions 
+{    
   [window makeKeyAndVisible];
 	
 	return YES;
@@ -77,9 +73,11 @@
 }
 
 
-- (void)dealloc {
-    [window release];
-    [super dealloc];
+- (void)dealloc 
+{
+  [navigationController release];
+  [window release];
+  [super dealloc];
 }
 
 

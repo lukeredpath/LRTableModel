@@ -13,6 +13,10 @@
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
+		A32C9B8A1211B9C100BBE14A /* LRAbstractTableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A32C9B891211B9C100BBE14A /* LRAbstractTableModel.m */; };
+		A32C9BB81211BC5800BBE14A /* ExamplesIndexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A32C9B861211B8E100BBE14A /* ExamplesIndexViewController.m */; };
+		A32C9BC11211BC6D00BBE14A /* LRAbstractTableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A32C9B891211B9C100BBE14A /* LRAbstractTableModel.m */; };
+		A32C9BCC1211BC8C00BBE14A /* Examples.plist in Resources */ = {isa = PBXBuildFile; fileRef = A32C9B9F1211BB6400BBE14A /* Examples.plist */; };
 		A3D492831210AB0C0076940C /* TestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D492821210AB0C0076940C /* TestHelper.m */; };
 		A3D4939B1210ACA60076940C /* libKiwi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D4938E1210AC440076940C /* libKiwi.a */; };
 		A3D4939D1210ACAF0076940C /* libMocky.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D4935B1210AC280076940C /* libMocky.a */; };
@@ -105,6 +109,11 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* TableViewModel_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewModel_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* TableViewModel-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TableViewModel-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		A32C9B851211B8E100BBE14A /* ExamplesIndexViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExamplesIndexViewController.h; sourceTree = "<group>"; };
+		A32C9B861211B8E100BBE14A /* ExamplesIndexViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExamplesIndexViewController.m; sourceTree = "<group>"; };
+		A32C9B881211B9C100BBE14A /* LRAbstractTableModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRAbstractTableModel.h; sourceTree = "<group>"; };
+		A32C9B891211B9C100BBE14A /* LRAbstractTableModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRAbstractTableModel.m; sourceTree = "<group>"; };
+		A32C9B9F1211BB6400BBE14A /* Examples.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Examples.plist; sourceTree = "<group>"; };
 		A3D492691210AA210076940C /* Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3D4926A1210AA210076940C /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
 		A3D492791210AA7E0076940C /* TestHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestHelper.h; sourceTree = "<group>"; };
@@ -158,6 +167,8 @@
 				A3D497F51210E0670076940C /* LRTableModel */,
 				1D3623240D0F684500981E51 /* TableViewModelAppDelegate.h */,
 				1D3623250D0F684500981E51 /* TableViewModelAppDelegate.m */,
+				A32C9B851211B8E100BBE14A /* ExamplesIndexViewController.h */,
+				A32C9B861211B8E100BBE14A /* ExamplesIndexViewController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -201,6 +212,7 @@
 				A3D494B51210BA4A0076940C /* repositories.plist */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* TableViewModel-Info.plist */,
+				A32C9B9F1211BB6400BBE14A /* Examples.plist */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -280,6 +292,8 @@
 				A3D497F81210E0670076940C /* LRTableModelEvent.h */,
 				A3D497F91210E0670076940C /* LRTableModelEvent.m */,
 				A3D497FA1210E0670076940C /* LRTableModelEventListener.h */,
+				A32C9B881211B9C100BBE14A /* LRAbstractTableModel.h */,
+				A32C9B891211B9C100BBE14A /* LRAbstractTableModel.m */,
 			);
 			path = LRTableModel;
 			sourceTree = "<group>";
@@ -426,6 +440,7 @@
 			files = (
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
 				A3D494B61210BA4A0076940C /* repositories.plist in Resources */,
+				A32C9BCC1211BC8C00BBE14A /* Examples.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,6 +480,8 @@
 				A3D4980F1210E0990076940C /* SimpleObject.m in Sources */,
 				A3D498101210E0990076940C /* SimpleTableModel.m in Sources */,
 				A3D498141210E0A10076940C /* LRTableModelEvent.m in Sources */,
+				A32C9BB81211BC5800BBE14A /* ExamplesIndexViewController.m in Sources */,
+				A32C9BC11211BC6D00BBE14A /* LRAbstractTableModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,6 +495,7 @@
 				A3D498131210E0A10076940C /* LRTableModelEvent.m in Sources */,
 				A3D498171210E0A70076940C /* SimpleTableModel.m in Sources */,
 				A3D498181210E0AA0076940C /* SimpleObject.m in Sources */,
+				A32C9B8A1211B9C100BBE14A /* LRAbstractTableModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
