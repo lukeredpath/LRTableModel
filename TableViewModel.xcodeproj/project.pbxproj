@@ -16,15 +16,16 @@
 		A3D492831210AB0C0076940C /* TestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D492821210AB0C0076940C /* TestHelper.m */; };
 		A3D4939B1210ACA60076940C /* libKiwi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D4938E1210AC440076940C /* libKiwi.a */; };
 		A3D4939D1210ACAF0076940C /* libMocky.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D4935B1210AC280076940C /* libMocky.a */; };
-		A3D4949B1210B6A90076940C /* SimpleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D494881210B6540076940C /* SimpleTableViewController.m */; };
 		A3D494B61210BA4A0076940C /* repositories.plist in Resources */ = {isa = PBXBuildFile; fileRef = A3D494B51210BA4A0076940C /* repositories.plist */; };
-		A3D494BB1210BB1F0076940C /* SimpleObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D494B11210B7370076940C /* SimpleObject.m */; };
-		A3D494E81210BE1E0076940C /* SimpleTableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D494E71210BE1E0076940C /* SimpleTableModel.m */; };
 		A3D494E91210BE2E0076940C /* SimpleTableViewModelTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D494E41210BE130076940C /* SimpleTableViewModelTest.m */; };
-		A3D494EC1210BE390076940C /* SimpleTableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D494E71210BE1E0076940C /* SimpleTableModel.m */; };
-		A3D4953D1210C1E70076940C /* LRTableModelEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D4953C1210C1E70076940C /* LRTableModelEvent.m */; };
-		A3D4953E1210C1F50076940C /* LRTableModelEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D4953C1210C1E70076940C /* LRTableModelEvent.m */; };
 		A3D4959E1210C6190076940C /* HCPassesBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D4959D1210C6190076940C /* HCPassesBlock.m */; };
+		A3D4980C1210E0930076940C /* SimpleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D498011210E0670076940C /* SimpleTableViewController.m */; };
+		A3D4980F1210E0990076940C /* SimpleObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D497FD1210E0670076940C /* SimpleObject.m */; };
+		A3D498101210E0990076940C /* SimpleTableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D497FF1210E0670076940C /* SimpleTableModel.m */; };
+		A3D498131210E0A10076940C /* LRTableModelEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D497F91210E0670076940C /* LRTableModelEvent.m */; };
+		A3D498141210E0A10076940C /* LRTableModelEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D497F91210E0670076940C /* LRTableModelEvent.m */; };
+		A3D498171210E0A70076940C /* SimpleTableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D497FF1210E0670076940C /* SimpleTableModel.m */; };
+		A3D498181210E0AA0076940C /* SimpleObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D497FD1210E0670076940C /* SimpleObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,21 +111,21 @@
 		A3D492821210AB0C0076940C /* TestHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestHelper.m; sourceTree = "<group>"; };
 		A3D493511210AC270076940C /* Mocky.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Mocky.xcodeproj; path = LRMocky/Mocky.xcodeproj; sourceTree = "<group>"; };
 		A3D493821210AC440076940C /* Kiwi.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Kiwi.xcodeproj; path = Kiwi/Kiwi.xcodeproj; sourceTree = "<group>"; };
-		A3D494871210B6540076940C /* SimpleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleTableViewController.h; sourceTree = "<group>"; };
-		A3D494881210B6540076940C /* SimpleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleTableViewController.m; sourceTree = "<group>"; };
-		A3D494B01210B7370076940C /* SimpleObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleObject.h; sourceTree = "<group>"; };
-		A3D494B11210B7370076940C /* SimpleObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleObject.m; sourceTree = "<group>"; };
 		A3D494B51210BA4A0076940C /* repositories.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = repositories.plist; path = Resources/repositories.plist; sourceTree = "<group>"; };
-		A3D494DE1210BCEB0076940C /* LRTableModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRTableModel.h; sourceTree = "<group>"; };
-		A3D494DF1210BD940076940C /* LRTableModelEventListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRTableModelEventListener.h; sourceTree = "<group>"; };
 		A3D494E41210BE130076940C /* SimpleTableViewModelTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleTableViewModelTest.m; sourceTree = "<group>"; };
-		A3D494E61210BE1E0076940C /* SimpleTableModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleTableModel.h; sourceTree = "<group>"; };
-		A3D494E71210BE1E0076940C /* SimpleTableModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleTableModel.m; sourceTree = "<group>"; };
-		A3D4953B1210C1E70076940C /* LRTableModelEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRTableModelEvent.h; sourceTree = "<group>"; };
-		A3D4953C1210C1E70076940C /* LRTableModelEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRTableModelEvent.m; sourceTree = "<group>"; };
 		A3D4959C1210C6190076940C /* HCPassesBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCPassesBlock.h; sourceTree = "<group>"; };
 		A3D4959D1210C6190076940C /* HCPassesBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCPassesBlock.m; sourceTree = "<group>"; };
-		A3D497981210D89A0076940C /* LRTableModelCellProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRTableModelCellProvider.h; sourceTree = "<group>"; };
+		A3D497F61210E0670076940C /* LRTableModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRTableModel.h; sourceTree = "<group>"; };
+		A3D497F71210E0670076940C /* LRTableModelCellProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRTableModelCellProvider.h; sourceTree = "<group>"; };
+		A3D497F81210E0670076940C /* LRTableModelEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRTableModelEvent.h; sourceTree = "<group>"; };
+		A3D497F91210E0670076940C /* LRTableModelEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRTableModelEvent.m; sourceTree = "<group>"; };
+		A3D497FA1210E0670076940C /* LRTableModelEventListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRTableModelEventListener.h; sourceTree = "<group>"; };
+		A3D497FC1210E0670076940C /* SimpleObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleObject.h; sourceTree = "<group>"; };
+		A3D497FD1210E0670076940C /* SimpleObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleObject.m; sourceTree = "<group>"; };
+		A3D497FE1210E0670076940C /* SimpleTableModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleTableModel.h; sourceTree = "<group>"; };
+		A3D497FF1210E0670076940C /* SimpleTableModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleTableModel.m; sourceTree = "<group>"; };
+		A3D498001210E0670076940C /* SimpleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleTableViewController.h; sourceTree = "<group>"; };
+		A3D498011210E0670076940C /* SimpleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,15 +154,10 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				A3D494DD1210BCD10076940C /* LRTableViewModel */,
+				A3D498091210E0780076940C /* Examples */,
+				A3D497F51210E0670076940C /* LRTableModel */,
 				1D3623240D0F684500981E51 /* TableViewModelAppDelegate.h */,
 				1D3623250D0F684500981E51 /* TableViewModelAppDelegate.m */,
-				A3D494871210B6540076940C /* SimpleTableViewController.h */,
-				A3D494881210B6540076940C /* SimpleTableViewController.m */,
-				A3D494B01210B7370076940C /* SimpleObject.h */,
-				A3D494B11210B7370076940C /* SimpleObject.m */,
-				A3D494E61210BE1E0076940C /* SimpleTableModel.h */,
-				A3D494E71210BE1E0076940C /* SimpleTableModel.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -276,16 +272,37 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A3D494DD1210BCD10076940C /* LRTableViewModel */ = {
+		A3D497F51210E0670076940C /* LRTableModel */ = {
 			isa = PBXGroup;
 			children = (
-				A3D494DE1210BCEB0076940C /* LRTableModel.h */,
-				A3D494DF1210BD940076940C /* LRTableModelEventListener.h */,
-				A3D4953B1210C1E70076940C /* LRTableModelEvent.h */,
-				A3D4953C1210C1E70076940C /* LRTableModelEvent.m */,
-				A3D497981210D89A0076940C /* LRTableModelCellProvider.h */,
+				A3D497F61210E0670076940C /* LRTableModel.h */,
+				A3D497F71210E0670076940C /* LRTableModelCellProvider.h */,
+				A3D497F81210E0670076940C /* LRTableModelEvent.h */,
+				A3D497F91210E0670076940C /* LRTableModelEvent.m */,
+				A3D497FA1210E0670076940C /* LRTableModelEventListener.h */,
 			);
-			name = LRTableViewModel;
+			path = LRTableModel;
+			sourceTree = "<group>";
+		};
+		A3D497FB1210E0670076940C /* SimpleTableModel */ = {
+			isa = PBXGroup;
+			children = (
+				A3D497FC1210E0670076940C /* SimpleObject.h */,
+				A3D497FD1210E0670076940C /* SimpleObject.m */,
+				A3D497FE1210E0670076940C /* SimpleTableModel.h */,
+				A3D497FF1210E0670076940C /* SimpleTableModel.m */,
+				A3D498001210E0670076940C /* SimpleTableViewController.h */,
+				A3D498011210E0670076940C /* SimpleTableViewController.m */,
+			);
+			path = SimpleTableModel;
+			sourceTree = "<group>";
+		};
+		A3D498091210E0780076940C /* Examples */ = {
+			isa = PBXGroup;
+			children = (
+				A3D497FB1210E0670076940C /* SimpleTableModel */,
+			);
+			name = Examples;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -444,10 +461,10 @@
 			files = (
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* TableViewModelAppDelegate.m in Sources */,
-				A3D4949B1210B6A90076940C /* SimpleTableViewController.m in Sources */,
-				A3D494BB1210BB1F0076940C /* SimpleObject.m in Sources */,
-				A3D494E81210BE1E0076940C /* SimpleTableModel.m in Sources */,
-				A3D4953D1210C1E70076940C /* LRTableModelEvent.m in Sources */,
+				A3D4980C1210E0930076940C /* SimpleTableViewController.m in Sources */,
+				A3D4980F1210E0990076940C /* SimpleObject.m in Sources */,
+				A3D498101210E0990076940C /* SimpleTableModel.m in Sources */,
+				A3D498141210E0A10076940C /* LRTableModelEvent.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,9 +474,10 @@
 			files = (
 				A3D492831210AB0C0076940C /* TestHelper.m in Sources */,
 				A3D494E91210BE2E0076940C /* SimpleTableViewModelTest.m in Sources */,
-				A3D494EC1210BE390076940C /* SimpleTableModel.m in Sources */,
-				A3D4953E1210C1F50076940C /* LRTableModelEvent.m in Sources */,
 				A3D4959E1210C6190076940C /* HCPassesBlock.m in Sources */,
+				A3D498131210E0A10076940C /* LRTableModelEvent.m in Sources */,
+				A3D498171210E0A70076940C /* SimpleTableModel.m in Sources */,
+				A3D498181210E0AA0076940C /* SimpleObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
