@@ -18,5 +18,13 @@
 		<key>controller</key>
 		<string>SearchTableViewController</string>
 	</dict>
+	<dict>
+		<key>name</key>
+		<string>GroupedTableModel</string>
+		<key>description</key>
+		<string>Working with sections</string>
+		<key>controller</key>
+		<string>GroupedTableViewController</string>
+	</dict>
 </array>
 </plist>
