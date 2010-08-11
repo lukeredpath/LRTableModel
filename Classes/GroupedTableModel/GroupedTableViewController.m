@@ -28,6 +28,8 @@
   self.title = @"Grouped";
   self.tableView.dataSource = self.tableModel;
   
+  self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(rotateButtonTapped:)] autorelease];
+  
   // divide up the repositories from the sample data into groups of x using some basic logic
   
   NSInteger numberOfItemsInGroup = 5;
@@ -60,6 +62,11 @@
 - (void)configureCell:(UITableViewCell *)cell forObject:(id)object atIndexPath:(NSIndexPath *)indexPath
 {
   cell.textLabel.text = object;
+}
+
+- (void)rotateButtonTapped:(id)sender
+{
+  [self.tableModel rotateLastItem];
 }
 
 @end

@@ -9,10 +9,10 @@
 #import <UIKit/UIKit.h>
 
 typedef enum {
-  LRTableModelInsertEvent = 0,
-  LRTableModelUpdateEvent,
-  LRTableModelDeleteEvent,
-  LRTableModelRefreshEvent
+  LRTableModelInsertRowEvent = 0,
+  LRTableModelUpdateRowEvent,
+  LRTableModelDeleteRowEvent,
+  LRTableModelRefreshDataEvent
 } LRTableModelEventType;
 
 @interface LRTableModelEvent : NSObject {
@@ -25,8 +25,8 @@ typedef enum {
 - (id)initWithEventType:(LRTableModelEventType)eventType indexPath:(NSIndexPath *)theIndexPath;
 - (BOOL)isEqualToEvent:(LRTableModelEvent *)otherEvent;
 - (NSArray *)indexPaths;
-+ (id)insertionAtRow:(NSInteger)row;
-+ (id)updatedRow:(NSInteger)row;
-+ (id)deletedRow:(NSInteger)row;
-+ (id)refreshed;
++ (id)insertionAtRow:(NSInteger)row section:(NSInteger)section;
++ (id)updatedRow:(NSInteger)row section:(NSInteger)section;
++ (id)deletedRow:(NSInteger)row section:(NSInteger)section;
++ (id)refreshedData;
 @end

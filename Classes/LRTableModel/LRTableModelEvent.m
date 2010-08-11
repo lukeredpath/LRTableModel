@@ -38,17 +38,17 @@
 {
   NSString *eventType = nil;
   switch (self.type) {
-    case LRTableModelInsertEvent:
-      eventType = @"LRTableModelInsertEvent";
+    case LRTableModelInsertRowEvent:
+      eventType = @"LRTableModelInsertRowEvent";
       break;
-    case LRTableModelUpdateEvent:
-      eventType = @"LRTableModelUpdateEvent";
+    case LRTableModelUpdateRowEvent:
+      eventType = @"LRTableModelUpdateRowEvent";
       break;
-    case LRTableModelDeleteEvent:
-      eventType = @"LRTableModelDeleteEvent";
+    case LRTableModelDeleteRowEvent:
+      eventType = @"LRTableModelDeleteRowEvent";
       break;
-    case LRTableModelRefreshEvent:
-      eventType = @"LRTableModelRefreshEvent";
+    case LRTableModelRefreshDataEvent:
+      eventType = @"LRTableModelRefreshDataEvent";
       break;
     default:
       eventType = @"UnknownEventType";
@@ -74,27 +74,27 @@
     otherEvent.type == self.type;
 }
 
-+ (id)insertionAtRow:(NSInteger)row;
++ (id)insertionAtRow:(NSInteger)row section:(NSInteger)section;
 {
-  NSIndexPath *indexPath = [NSIndexPath indexPathForRow:row inSection:0];
-  return [[[self alloc] initWithEventType:LRTableModelInsertEvent indexPath:indexPath] autorelease];
+  NSIndexPath *indexPath = [NSIndexPath indexPathForRow:row inSection:section];
+  return [[[self alloc] initWithEventType:LRTableModelInsertRowEvent indexPath:indexPath] autorelease];
 }
 
-+ (id)updatedRow:(NSInteger)row;
++ (id)updatedRow:(NSInteger)row section:(NSInteger)section;
 {
-  NSIndexPath *indexPath = [NSIndexPath indexPathForRow:row inSection:0];
-  return [[[self alloc] initWithEventType:LRTableModelUpdateEvent indexPath:indexPath] autorelease];
+  NSIndexPath *indexPath = [NSIndexPath indexPathForRow:row inSection:section];
+  return [[[self alloc] initWithEventType:LRTableModelUpdateRowEvent indexPath:indexPath] autorelease];
 }
 
-+ (id)deletedRow:(NSInteger)row;
++ (id)deletedRow:(NSInteger)row section:(NSInteger)section;
 {
-  NSIndexPath *indexPath = [NSIndexPath indexPathForRow:row inSection:0];
-  return [[[self alloc] initWithEventType:LRTableModelDeleteEvent indexPath:indexPath] autorelease];
+  NSIndexPath *indexPath = [NSIndexPath indexPathForRow:row inSection:section];
+  return [[[self alloc] initWithEventType:LRTableModelDeleteRowEvent indexPath:indexPath] autorelease];
 }
 
-+ (id)refreshed;
++ (id)refreshedData;
 {
-  return [[[self alloc] initWithEventType:LRTableModelRefreshEvent indexPath:nil] autorelease];
+  return [[[self alloc] initWithEventType:LRTableModelRefreshDataEvent indexPath:nil] autorelease];
 }
 
 @end

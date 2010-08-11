@@ -28,7 +28,7 @@
 - (void)loadExamplesFromPlistNamed:(NSString *)plistName inBundle:(NSBundle *)bundle
 {
   examples = [[NSArray arrayWithContentsOfFile:[bundle pathForResource:plistName ofType:@"plist"]] retain];
-  [self notifyListeners:[LRTableModelEvent refreshed]];
+  [self notifyListeners:[LRTableModelEvent refreshedData]];
 }
 
 - (NSInteger)numberOfSections;

@@ -100,10 +100,10 @@
 - (void)tableModelChanged:(LRTableModelEvent *)changeEvent
 {
   switch (changeEvent.type) {
-    case LRTableModelRefreshEvent:
+    case LRTableModelRefreshDataEvent:
       [self.tableView reloadData];
       break;
-    case LRTableModelInsertEvent:
+    case LRTableModelInsertRowEvent:
       [self.tableView insertRowsAtIndexPaths:changeEvent.indexPaths withRowAnimation:UITableViewRowAnimationTop];
       break;
     default:

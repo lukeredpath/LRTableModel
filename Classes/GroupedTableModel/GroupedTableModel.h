@@ -15,4 +15,5 @@
   NSMutableArray *sectionTitles;
 }
 - (void)setSections:(NSArray *)arrayOfSectionArrays sectionTitles:(NSArray *)titles;
+- (void)rotateLastItem;
 @end

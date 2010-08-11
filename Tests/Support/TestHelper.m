@@ -41,7 +41,7 @@ SPEC_END
 @end
 
 id insertEventAtRow(int rowIndex) {
-  return LRM_with(equalTo([LRTableModelEvent insertionAtRow:rowIndex]));
+  return LRM_with(equalTo([LRTableModelEvent insertionAtRow:rowIndex section:0]));
 }
 
 id anyEvent() {
@@ -49,14 +49,14 @@ id anyEvent() {
 }
 
 id updateEventAtRow(int rowIndex) {
-  return LRM_with(equalTo([LRTableModelEvent updatedRow:rowIndex]));
+  return LRM_with(equalTo([LRTableModelEvent updatedRow:rowIndex section:0]));
 }
 
 id deleteEventAtRow(int rowIndex) {
-  return LRM_with(equalTo([LRTableModelEvent deletedRow:rowIndex]));
+  return LRM_with(equalTo([LRTableModelEvent deletedRow:rowIndex section:0]));
 }
 
 id refreshEvent() {
-  return LRM_with(equalTo([LRTableModelEvent refreshed]));
+  return LRM_with(equalTo([LRTableModelEvent refreshedData]));
 }
 

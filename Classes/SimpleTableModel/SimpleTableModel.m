@@ -49,7 +49,7 @@
 - (void)setSortOrder:(SortOrder)newSortOrder
 {
   sortOrder = newSortOrder;
-  [self notifyListeners:[LRTableModelEvent refreshed]];
+  [self notifyListeners:[LRTableModelEvent refreshedData]];
 }
 
 - (void)addObject:(id)anObject;
@@ -57,7 +57,7 @@
   [objects addObject:anObject];
   
   NSInteger indexOfNewObject = [objects indexOfObject:anObject];
-  [self notifyListeners:[LRTableModelEvent insertionAtRow:indexOfNewObject]];
+  [self notifyListeners:[LRTableModelEvent insertionAtRow:indexOfNewObject section:0]];
 }
 
 - (void)removeObject:(id)anObject;
@@ -65,26 +65,26 @@
   NSInteger indexOfObject = [objects indexOfObject:anObject];
   
   [objects removeObject:anObject];
-  [self notifyListeners:[LRTableModelEvent deletedRow:indexOfObject]];
+  [self notifyListeners:[LRTableModelEvent deletedRow:indexOfObject section:0]];
 }
 
 - (void)replaceObjectAtIndex:(NSInteger)index withObject:(id)anObject;
 {
   [objects replaceObjectAtIndex:index withObject:anObject];
-  [self notifyListeners:[LRTableModelEvent updatedRow:index]];
+  [self notifyListeners:[LRTableModelEvent updatedRow:index section:0]];
 }
 
 - (void)setObjects:(NSArray *)newObjects;
 {
   [objects removeAllObjects];
   [objects setArray:newObjects];
-  [self notifyListeners:[LRTableModelEvent refreshed]];
+  [self notifyListeners:[LRTableModelEvent refreshedData]];
 }
 
 - (void)insertObject:(id)anObject atIndex:(NSInteger)index;
 {
   [objects insertObject:anObject atIndex:index];
-  [self notifyListeners:[LRTableModelEvent insertionAtRow:index]];
+  [self notifyListeners:[LRTableModelEvent insertionAtRow:index section:0]];
 }
 
 #pragma mark -
