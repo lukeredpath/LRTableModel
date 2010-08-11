@@ -54,9 +54,29 @@
   [self.tableModel setSections:repositoryNamesInSections sectionTitles:sectionTitles];
 }
 
+- (void)tableModelWillBeginUpdates
+{
+  [self.tableView beginUpdates];
+}
+
 - (void)tableModelChanged:(LRTableModelEvent *)changeEvent
 {
-  [self.tableView reloadData];
+  switch (changeEvent.type) {
+    case LRTableModelInsertRowEvent:
+      [self.tableView insertRowsAtIndexPaths:changeEvent.indexPaths withRowAnimation:UITableViewRowAnimationTop];
+      break;
+    case LRTableModelDeleteRowEvent:
+      [self.tableView deleteRowsAtIndexPaths:changeEvent.indexPaths withRowAnimation:UITableViewRowAnimationBottom];
+      break;
+    default:
+      [self.tableView reloadData];
+      break;
+  }
+}
+
+- (void)tableModelDidEndUpdates
+{
+  [self.tableView endUpdates];
 }
 
 - (void)configureCell:(UITableViewCell *)cell forObject:(id)object atIndexPath:(NSIndexPath *)indexPath

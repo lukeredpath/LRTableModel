@@ -64,7 +64,7 @@ NSPredicate *predicateForPrefix(NSString *prefix)
 {
   [filteredObjects release];
   filteredObjects = nil;
-  [self notifyListeners:[LRTableModelEvent refreshed]];
+  [self notifyListeners:[LRTableModelEvent refreshedData]];
 }
 
 @end

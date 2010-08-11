@@ -41,6 +41,20 @@
   }
 }
 
+- (void)beginUpdates
+{
+  for (id<LRTableModelEventListener> listener in eventListeners) {
+    [listener tableModelWillBeginUpdates];
+  }
+}
+
+- (void)endUpdates
+{
+  for (id<LRTableModelEventListener> listener in eventListeners) {
+    [listener tableModelDidEndUpdates];
+  }
+}
+
 - (void)addTableModelListener:(id<LRTableModelEventListener>)listener;
 {
   [eventListeners addObject:listener];

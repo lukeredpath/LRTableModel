@@ -57,6 +57,8 @@
 - (void)rotateLastItem;
 {
   NSMutableArray *lastSection = [sections lastObject];
+ 
+  [self beginUpdates];
   
   id lastObject = [[lastSection lastObject] retain];
   NSInteger indexOfLastObject = [lastSection indexOfObject:lastObject];
@@ -68,11 +70,15 @@
     [self notifyListeners:[LRTableModelEvent insertionAtRow:0 section:[sections indexOfObject:section]]];
     [lastObject release];
     
+    [self endUpdates];
+    
     if (section != [sections lastObject]) {
+      [self beginUpdates];
+      
       lastObject = [[section lastObject] retain];
       NSInteger indexOfLastObject = [section indexOfObject:lastObject];
       [section removeLastObject];
-      [self notifyListeners:[LRTableModelEvent insertionAtRow:indexOfLastObject section:[sections indexOfObject:section]]];
+      [self notifyListeners:[LRTableModelEvent deletedRow:indexOfLastObject section:[sections indexOfObject:section]]];
     }
   }
 }

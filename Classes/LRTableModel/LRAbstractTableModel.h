@@ -15,6 +15,8 @@
 }
 @property (nonatomic, retain) IBOutlet id<LRTableModelCellProvider> cellProvider;
 
-- (void)notifyListeners:(LRTableModelEvent *)event;
 - (id)initWithCellProvider:(id<LRTableModelCellProvider>)theCellProvider;
+- (void)notifyListeners:(LRTableModelEvent *)event;
+- (void)beginUpdates;
+- (void)endUpdates;
 @end

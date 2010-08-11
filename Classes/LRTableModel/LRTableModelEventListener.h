@@ -10,7 +10,9 @@
 #import "LRTableModelEvent.h"
 
 @protocol LRTableModelEventListener
-
 - (void)tableModelChanged:(LRTableModelEvent *)changeEvent;
 
+@optional
+- (void)tableModelWillBeginUpdates;
+- (void)tableModelDidEndUpdates;
 @end
