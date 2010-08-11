@@ -27,7 +27,6 @@
 {
   [super viewDidLoad];
 
-  self.title = @"Grouped";
   self.tableView.dataSource = self.tableModel;
   
   self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(rotateButtonTapped:)] autorelease];

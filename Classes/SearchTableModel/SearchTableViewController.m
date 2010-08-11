@@ -35,7 +35,6 @@
 {
   [super viewDidLoad];
   
-  self.title = @"Searchable Table View";
   self.tableView.rowHeight = 65;
   self.searchDisplayController.searchResultsTableView.rowHeight = self.tableView.rowHeight;
   

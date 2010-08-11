@@ -35,7 +35,6 @@
   
   [self configureToolbarItems];
   
-  self.title = @"Simple Table View";
   self.tableView.rowHeight = 65;
   self.tableView.dataSource = self.tableModel;
   

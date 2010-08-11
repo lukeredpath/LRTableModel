@@ -103,6 +103,7 @@
   NSDictionary *exampleData = [self.examplesTableModel objectAtIndexPath:indexPath];
   
   UIViewController *exampleViewController = [[NSClassFromString([exampleData valueForKey:@"controller"]) alloc] init];
+  exampleViewController.title = [exampleData valueForKey:@"name"];
   [self.navigationController pushViewController:exampleViewController animated:YES];
   [exampleViewController release];
 }
