@@ -90,7 +90,7 @@
 #pragma mark -
 #pragma mark LRTableModel methods
 
-- (NSInteger)numberOfRows;
+- (NSInteger)numberOfRowsInSection:(NSInteger)sectionIndex;
 {
   return [objects count]; 
 }

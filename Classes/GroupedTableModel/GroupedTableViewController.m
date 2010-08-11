@@ -8,10 +8,7 @@
 
 #import "GroupedTableViewController.h"
 #import "GithubRepositories.h"
-
-@implementation GroupedTableModel
-
-@end
+#import "GroupedTableModel.h"
 
 @implementation GroupedTableViewController
 
@@ -28,14 +25,31 @@
 {
   [super viewDidLoad];
 
+  self.title = @"Grouped";
   self.tableView.dataSource = self.tableModel;
   
-  NSMutableArray *repositoryNames = [NSMutableArray array];
+  // divide up the repositories from the sample data into groups of x using some basic logic
+  
+  NSInteger numberOfItemsInGroup = 5;
+  
+  NSMutableArray *repositoryNamesInSections = [NSMutableArray arrayWithObject:[NSMutableArray array]];
+  NSMutableArray *sectionTitles = [NSMutableArray arrayWithObject:[NSString stringWithFormat:@"Items 1 to %d", numberOfItemsInGroup]];
+  
+  __block NSMutableArray *currentSection = [repositoryNamesInSections objectAtIndex:0];
+
   [[GithubRepositories exampleRepositories] enumerateObjectsUsingBlock:^(id repository, NSUInteger idx, BOOL *stop) {
-    [repositoryNames addObject:[repository valueForKey:@"name"]];
+    NSString *repositoryName = [repository valueForKey:@"name"];
+    
+    if (idx > 0 && (idx % numberOfItemsInGroup) == 0) {
+      currentSection = [NSMutableArray arrayWithObject:repositoryName];
+      [repositoryNamesInSections addObject:currentSection];
+      [sectionTitles addObject:[NSString stringWithFormat:@"Items %d to %d", idx + 1, idx + numberOfItemsInGroup]];
+    } else {
+      [currentSection addObject:repositoryName];
+    }
   }];
 
-  [self.tableModel setObjects:repositoryNames];
+  [self.tableModel setSections:repositoryNamesInSections sectionTitles:sectionTitles];
 }
 
 - (void)tableModelChanged:(LRTableModelEvent *)changeEvent

@@ -36,7 +36,7 @@
   return 1;
 }
 
-- (NSInteger)numberOfRows;
+- (NSInteger)numberOfRowsInSection:(NSInteger)sectionIndex;
 {
   return [examples count]; 
 }

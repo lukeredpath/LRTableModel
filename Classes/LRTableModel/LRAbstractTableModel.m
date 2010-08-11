@@ -56,12 +56,17 @@
   return 1;
 }
 
-- (NSInteger)numberOfRows; // abstract
+- (NSInteger)numberOfRowsInSection:(NSInteger)sectionIndex; // abstract
 {
   return 0;
 }
 
 - (id)objectAtIndexPath:(NSIndexPath *)indexPath; // abstract
+{
+  return nil;
+}
+
+- (NSString *)headerforSection:(NSInteger)section; // abstract
 {
   return nil;
 }
@@ -97,7 +102,12 @@
 
 - (NSInteger)tableView:(UITableView *)table numberOfRowsInSection:(NSInteger)section
 {
-  return [self numberOfRows];
+  return [self numberOfRowsInSection:section];
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+  return [self headerforSection:section];
 }
 
 @end

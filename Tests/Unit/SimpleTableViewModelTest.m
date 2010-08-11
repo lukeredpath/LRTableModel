@@ -11,34 +11,6 @@
 #import "LRTableModelEventListener.h"
 #import "LRTableModelEvent.h"
 
-// this is to work around lack of protocol mock support in mocky
-@interface LRMockEventListener : NSObject <LRTableModelEventListener>
-{} 
-@end
-
-@implementation LRMockEventListener
-- (void)tableModelChanged:(LRTableModelEvent *)changeEvent {}
-@end
-
-id insertEventAtRow(int rowIndex) {
-  return LRM_with(equalTo([LRTableModelEvent insertionAtRow:rowIndex]));
-}
-
-id anyEvent() {
-  return LRM_with(instanceOf([LRTableModelEvent class]));
-}
-
-id updateEventAtRow(int rowIndex) {
-  return LRM_with(equalTo([LRTableModelEvent updatedRow:rowIndex]));
-}
-
-id deleteEventAtRow(int rowIndex) {
-  return LRM_with(equalTo([LRTableModelEvent deletedRow:rowIndex]));
-}
-
-id refreshEvent() {
-  return LRM_with(equalTo([LRTableModelEvent refreshed]));
-}
 
 SPEC_BEGIN(SimpleTableViewModelSpec)
 
@@ -61,7 +33,7 @@ describe(@"SimpleTableModel", ^{
     });
     
     it(@"should have one row", ^{
-      assertThatInt([model numberOfRows], equalToInt(1));
+      assertThatInt([model numberOfRowsInSection:0], equalToInt(1));
     });
     
     it(@"should return the single object for index path {0, 0}", ^{
@@ -76,7 +48,7 @@ describe(@"SimpleTableModel", ^{
     });
     
     it(@"should have a row for each object", ^{
-      assertThatInt([model numberOfRows], equalToInt(3));
+      assertThatInt([model numberOfRowsInSection:0], equalToInt(3));
     });
   });
   

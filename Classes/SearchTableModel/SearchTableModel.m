@@ -37,7 +37,7 @@
   return objects;
 }
 
-- (NSInteger)numberOfRows;
+- (NSInteger)numberOfRowsInSection:(NSInteger)section;
 {
   return [[self activeCollection] count];
 }

@@ -7,14 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "SimpleTableModel.h"
+#import "LRTableModelCellProvider.h"
+#import "LRTableModelEventListener.h"
 
-@interface GroupedTableModel : SimpleTableModel
-{
-
-}
-@end
-
+@class GroupedTableModel;
 
 @interface GroupedTableViewController : UITableViewController <LRTableModelCellProvider, LRTableModelEventListener> {
   GroupedTableModel *tableModel;

@@ -35,3 +35,28 @@ describe(@"A simple test", ^{
 });
 
 SPEC_END
+
+@implementation LRMockEventListener
+- (void)tableModelChanged:(LRTableModelEvent *)changeEvent {}
+@end
+
+id insertEventAtRow(int rowIndex) {
+  return LRM_with(equalTo([LRTableModelEvent insertionAtRow:rowIndex]));
+}
+
+id anyEvent() {
+  return LRM_with(instanceOf([LRTableModelEvent class]));
+}
+
+id updateEventAtRow(int rowIndex) {
+  return LRM_with(equalTo([LRTableModelEvent updatedRow:rowIndex]));
+}
+
+id deleteEventAtRow(int rowIndex) {
+  return LRM_with(equalTo([LRTableModelEvent deletedRow:rowIndex]));
+}
+
+id refreshEvent() {
+  return LRM_with(equalTo([LRTableModelEvent refreshed]));
+}
+

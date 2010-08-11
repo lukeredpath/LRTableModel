@@ -13,8 +13,9 @@
 @protocol LRTableModel <NSObject>
 
 - (NSInteger)numberOfSections;
-- (NSInteger)numberOfRows;
+- (NSInteger)numberOfRowsInSection:(NSInteger)sectionIndex;
 - (id)objectAtIndexPath:(NSIndexPath *)indexPath;
+- (NSString *)headerforSection:(NSInteger)section;
 - (void)addTableModelListener:(id<LRTableModelEventListener>)listener;
 - (void)removeTableModelListener:(id<LRTableModelEventListener>)listener;
 

@@ -22,6 +22,7 @@
 		A32C9C6B1211C2AE00BBE14A /* SearchTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A32C9C021211BF6800BBE14A /* SearchTableViewController.xib */; };
 		A32C9C951211C39C00BBE14A /* SearchTableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A32C9C201211C08200BBE14A /* SearchTableModel.m */; };
 		A32C9DDB1212122C00BBE14A /* GroupedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A32C9DD312120FE900BBE14A /* GroupedTableViewController.m */; };
+		A32C9E161212144900BBE14A /* GroupedTableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A32C9E141212142900BBE14A /* GroupedTableModel.m */; };
 		A3D492831210AB0C0076940C /* TestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D492821210AB0C0076940C /* TestHelper.m */; };
 		A3D4939B1210ACA60076940C /* libKiwi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D4938E1210AC440076940C /* libKiwi.a */; };
 		A3D4939D1210ACAF0076940C /* libMocky.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D4935B1210AC280076940C /* libMocky.a */; };
@@ -128,6 +129,8 @@
 		A32C9C201211C08200BBE14A /* SearchTableModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTableModel.m; sourceTree = "<group>"; };
 		A32C9DD212120FE900BBE14A /* GroupedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupedTableViewController.h; sourceTree = "<group>"; };
 		A32C9DD312120FE900BBE14A /* GroupedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupedTableViewController.m; sourceTree = "<group>"; };
+		A32C9E131212142900BBE14A /* GroupedTableModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupedTableModel.h; sourceTree = "<group>"; };
+		A32C9E141212142900BBE14A /* GroupedTableModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupedTableModel.m; sourceTree = "<group>"; };
 		A3D492691210AA210076940C /* Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3D4926A1210AA210076940C /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
 		A3D492791210AA7E0076940C /* TestHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestHelper.h; sourceTree = "<group>"; };
@@ -260,6 +263,8 @@
 			children = (
 				A32C9DD212120FE900BBE14A /* GroupedTableViewController.h */,
 				A32C9DD312120FE900BBE14A /* GroupedTableViewController.m */,
+				A32C9E131212142900BBE14A /* GroupedTableModel.h */,
+				A32C9E141212142900BBE14A /* GroupedTableModel.m */,
 			);
 			path = GroupedTableModel;
 			sourceTree = "<group>";
@@ -526,6 +531,7 @@
 				A32C9C3B1211C11600BBE14A /* SearchTableViewController.m in Sources */,
 				A32C9C951211C39C00BBE14A /* SearchTableModel.m in Sources */,
 				A32C9DDB1212122C00BBE14A /* GroupedTableViewController.m in Sources */,
+				A32C9E161212144900BBE14A /* GroupedTableModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

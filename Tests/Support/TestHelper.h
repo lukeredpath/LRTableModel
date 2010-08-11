@@ -14,3 +14,17 @@
 #import "OCHamcrest.h"
 
 #import "HCPassesBlock.h"
+
+#import "LRTableModelEvent.h"
+#import "LRTableModelEventListener.h"
+
+// this is to work around lack of protocol mock support in mocky
+@interface LRMockEventListener : NSObject <LRTableModelEventListener>
+{} 
+@end
+
+id anyEvent();
+id insertEventAtRow(int rowIndex);
+id updateEventAtRow(int rowIndex);
+id deleteEventAtRow(int rowIndex);
+id refreshEvent();
