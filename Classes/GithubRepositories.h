@@ -13,4 +13,5 @@
 
 }
 + (NSArray *)exampleRepositories;
++ (NSArray *)repositoryNamesInGroupsOf:(NSInteger)numberOfItemsInSection;
 @end

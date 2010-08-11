@@ -21,6 +21,8 @@
   return tableModel;
 }
 
+#define kNumberOfObjectsInSection 5
+
 - (void)viewDidLoad
 {
   [super viewDidLoad];
@@ -29,29 +31,16 @@
   self.tableView.dataSource = self.tableModel;
   
   self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(rotateButtonTapped:)] autorelease];
-  
-  // divide up the repositories from the sample data into groups of x using some basic logic
-  
-  NSInteger numberOfItemsInGroup = 5;
-  
-  NSMutableArray *repositoryNamesInSections = [NSMutableArray arrayWithObject:[NSMutableArray array]];
-  NSMutableArray *sectionTitles = [NSMutableArray arrayWithObject:[NSString stringWithFormat:@"Items 1 to %d", numberOfItemsInGroup]];
-  
-  __block NSMutableArray *currentSection = [repositoryNamesInSections objectAtIndex:0];
 
-  [[GithubRepositories exampleRepositories] enumerateObjectsUsingBlock:^(id repository, NSUInteger idx, BOOL *stop) {
-    NSString *repositoryName = [repository valueForKey:@"name"];
-    
-    if (idx > 0 && (idx % numberOfItemsInGroup) == 0) {
-      currentSection = [NSMutableArray arrayWithObject:repositoryName];
-      [repositoryNamesInSections addObject:currentSection];
-      [sectionTitles addObject:[NSString stringWithFormat:@"Items %d to %d", idx + 1, idx + numberOfItemsInGroup]];
-    } else {
-      [currentSection addObject:repositoryName];
-    }
-  }];
+  NSArray *sections = [GithubRepositories repositoryNamesInGroupsOf:kNumberOfObjectsInSection];
 
-  [self.tableModel setSections:repositoryNamesInSections sectionTitles:sectionTitles];
+  NSMutableArray *sectionTitles = [NSMutableArray array];
+  for (int i = 0; i < sections.count; i++) {
+    NSInteger firstItemIndex = (i * kNumberOfObjectsInSection);
+    [sectionTitles addObject:[NSString stringWithFormat:@"Item %d to %d", firstItemIndex + 1, firstItemIndex + kNumberOfObjectsInSection]];
+  }
+  
+  [self.tableModel setSections:sections sectionTitles:sectionTitles];
 }
 
 - (void)tableModelWillBeginUpdates
@@ -90,3 +79,4 @@
 }
 
 @end
+
