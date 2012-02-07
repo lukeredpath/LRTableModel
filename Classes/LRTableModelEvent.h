@@ -17,7 +17,7 @@ typedef enum {
 
 @interface LRTableModelEvent : NSObject {
   LRTableModelEventType type;
-  NSIndexPath *indexPath;
+  NSIndexPath *__strong indexPath;
 }
 @property (nonatomic, readonly) LRTableModelEventType type;
 @property (nonatomic, readonly) NSIndexPath *indexPath;

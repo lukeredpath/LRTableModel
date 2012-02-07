@@ -22,17 +22,11 @@
 {
   if (self = [super init]) {
     eventListeners = [[NSMutableArray alloc] init];
-    cellProvider = [theCellProvider retain];
+    cellProvider = theCellProvider;
   }
   return self;
 }
 
-- (void)dealloc
-{
-  [cellProvider release];
-  [eventListeners release];
-  [super dealloc];
-}
 
 - (void)notifyListeners:(LRTableModelEvent *)event;
 {
@@ -101,7 +95,7 @@
     if ([cellProvider respondsToSelector:@selector(cellForObjectAtIndexPath:reuseIdentifier:)]) {
       cell = [cellProvider cellForObjectAtIndexPath:indexPath reuseIdentifier:reuseIdentifier];
     } else {
-      cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseIdentifier] autorelease];
+      cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseIdentifier];
     }
   }
   [cellProvider configureCell:cell forObject:[self objectAtIndexPath:indexPath] atIndexPath:indexPath];
