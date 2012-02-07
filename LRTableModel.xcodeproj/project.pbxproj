@@ -25,7 +25,6 @@
 		A3A03BC814E17AE000EF322F /* SimpleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A03BB914E17AE000EF322F /* SimpleTableViewController.m */; };
 		A3A03BC914E17AE000EF322F /* TableViewModelAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A03BBB14E17AE000EF322F /* TableViewModelAppDelegate.m */; };
 		A3A03BD614E17B1100EF322F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
-		A3A03BDC14E17B1100EF322F /* LRTableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A03BDB14E17B1100EF322F /* LRTableModel.m */; };
 		A3A03BE014E17B2200EF322F /* LRAbstractTableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A03BCB14E17AF500EF322F /* LRAbstractTableModel.m */; };
 		A3A03BE114E17B2200EF322F /* LRTableModelEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A03BCF14E17AF500EF322F /* LRTableModelEvent.m */; };
 		A3A03BE214E17B2900EF322F /* LRAbstractTableModel.h in Headers */ = {isa = PBXBuildFile; fileRef = A3A03BCA14E17AF500EF322F /* LRAbstractTableModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -83,9 +82,6 @@
 		A3A03BCF14E17AF500EF322F /* LRTableModelEvent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRTableModelEvent.m; sourceTree = "<group>"; };
 		A3A03BD014E17AF500EF322F /* LRTableModelEventListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRTableModelEventListener.h; sourceTree = "<group>"; };
 		A3A03BD514E17B1100EF322F /* libLRTableModel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLRTableModel.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		A3A03BD914E17B1100EF322F /* LRTableModel-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LRTableModel-Prefix.pch"; sourceTree = "<group>"; };
-		A3A03BDA14E17B1100EF322F /* LRTableModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRTableModel.h; sourceTree = "<group>"; };
-		A3A03BDB14E17B1100EF322F /* LRTableModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRTableModel.m; sourceTree = "<group>"; };
 		A3A03BE814E17B4800EF322F /* libPods-specs.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-specs.a"; path = "Pods/build/Release-iphoneos/libPods-specs.a"; sourceTree = "<group>"; };
 		A3D492691210AA210076940C /* Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3D4926A1210AA210076940C /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
@@ -160,7 +156,6 @@
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
-				A3A03BD714E17B1100EF322F /* LRTableModel */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 				A3A03BE814E17B4800EF322F /* libPods-specs.a */,
@@ -251,24 +246,6 @@
 				A3A03BB914E17AE000EF322F /* SimpleTableViewController.m */,
 			);
 			path = SimpleTableModel;
-			sourceTree = "<group>";
-		};
-		A3A03BD714E17B1100EF322F /* LRTableModel */ = {
-			isa = PBXGroup;
-			children = (
-				A3A03BDA14E17B1100EF322F /* LRTableModel.h */,
-				A3A03BDB14E17B1100EF322F /* LRTableModel.m */,
-				A3A03BD814E17B1100EF322F /* Supporting Files */,
-			);
-			path = LRTableModel;
-			sourceTree = "<group>";
-		};
-		A3A03BD814E17B1100EF322F /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				A3A03BD914E17B1100EF322F /* LRTableModel-Prefix.pch */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		A3D492721210AA590076940C /* Tests */ = {
@@ -453,7 +430,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3A03BDC14E17B1100EF322F /* LRTableModel.m in Sources */,
 				A3A03BE014E17B2200EF322F /* LRAbstractTableModel.m in Sources */,
 				A3A03BE114E17B2200EF322F /* LRTableModelEvent.m in Sources */,
 			);
