@@ -1,0 +1,707 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
+		A3A03BBC14E17AE000EF322F /* Examples.plist in Resources */ = {isa = PBXBuildFile; fileRef = A3A03BA114E17AE000EF322F /* Examples.plist */; };
+		A3A03BBD14E17AE000EF322F /* ExamplesIndexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A03BA314E17AE000EF322F /* ExamplesIndexViewController.m */; };
+		A3A03BBE14E17AE000EF322F /* GithubRepositories.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A03BA514E17AE000EF322F /* GithubRepositories.m */; };
+		A3A03BBF14E17AE000EF322F /* GroupedTableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A03BA814E17AE000EF322F /* GroupedTableModel.m */; };
+		A3A03BC014E17AE000EF322F /* GroupedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A03BAA14E17AE000EF322F /* GroupedTableViewController.m */; };
+		A3A03BC114E17AE000EF322F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A03BAB14E17AE000EF322F /* main.m */; };
+		A3A03BC214E17AE000EF322F /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3A03BAC14E17AE000EF322F /* MainWindow.xib */; };
+		A3A03BC314E17AE000EF322F /* SearchTableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A03BAF14E17AE000EF322F /* SearchTableModel.m */; };
+		A3A03BC414E17AE000EF322F /* SearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A03BB114E17AE000EF322F /* SearchTableViewController.m */; };
+		A3A03BC514E17AE000EF322F /* SearchTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3A03BB214E17AE000EF322F /* SearchTableViewController.xib */; };
+		A3A03BC614E17AE000EF322F /* SimpleObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A03BB514E17AE000EF322F /* SimpleObject.m */; };
+		A3A03BC714E17AE000EF322F /* SimpleTableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A03BB714E17AE000EF322F /* SimpleTableModel.m */; };
+		A3A03BC814E17AE000EF322F /* SimpleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A03BB914E17AE000EF322F /* SimpleTableViewController.m */; };
+		A3A03BC914E17AE000EF322F /* TableViewModelAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A03BBB14E17AE000EF322F /* TableViewModelAppDelegate.m */; };
+		A3A03BD614E17B1100EF322F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		A3A03BDC14E17B1100EF322F /* LRTableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A03BDB14E17B1100EF322F /* LRTableModel.m */; };
+		A3A03BE014E17B2200EF322F /* LRAbstractTableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A03BCB14E17AF500EF322F /* LRAbstractTableModel.m */; };
+		A3A03BE114E17B2200EF322F /* LRTableModelEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A03BCF14E17AF500EF322F /* LRTableModelEvent.m */; };
+		A3A03BE214E17B2900EF322F /* LRAbstractTableModel.h in Headers */ = {isa = PBXBuildFile; fileRef = A3A03BCA14E17AF500EF322F /* LRAbstractTableModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A3A03BE314E17B2900EF322F /* LRTableModelCellProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = A3A03BCD14E17AF500EF322F /* LRTableModelCellProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A3A03BE414E17B2900EF322F /* LRTableModelEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = A3A03BCE14E17AF500EF322F /* LRTableModelEvent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A3A03BE514E17B2900EF322F /* LRTableModelEventListener.h in Headers */ = {isa = PBXBuildFile; fileRef = A3A03BD014E17AF500EF322F /* LRTableModelEventListener.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A3A03BE614E17B3E00EF322F /* libLRTableModel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3A03BD514E17B1100EF322F /* libLRTableModel.a */; };
+		A3A03BE714E17B4800EF322F /* libLRTableModel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3A03BD514E17B1100EF322F /* libLRTableModel.a */; };
+		A3A03BE914E17B4800EF322F /* libPods-specs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3A03BE814E17B4800EF322F /* libPods-specs.a */; };
+		A3D492831210AB0C0076940C /* TestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D492821210AB0C0076940C /* TestHelper.m */; };
+		A3D494E91210BE2E0076940C /* SimpleTableViewModelTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D494E41210BE130076940C /* SimpleTableViewModelTest.m */; };
+		A3D4959E1210C6190076940C /* HCPassesBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D4959D1210C6190076940C /* HCPassesBlock.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D6058910D05DD3D006BFB54 /* LRTableModel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LRTableModel.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		288765FC0DF74451002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* LRTableModel_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRTableModel_Prefix.pch; sourceTree = "<group>"; };
+		662FE6D91D8E41DBB58A189B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D1107310486CEB800E47090 /* LRTableModel-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "LRTableModel-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		A3A03B9D14E17A0F00EF322F /* Pods-specs.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Pods-specs.xcconfig"; path = "Pods/Pods-specs.xcconfig"; sourceTree = "<group>"; };
+		A3A03BA114E17AE000EF322F /* Examples.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Examples.plist; sourceTree = "<group>"; };
+		A3A03BA214E17AE000EF322F /* ExamplesIndexViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExamplesIndexViewController.h; sourceTree = "<group>"; };
+		A3A03BA314E17AE000EF322F /* ExamplesIndexViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExamplesIndexViewController.m; sourceTree = "<group>"; };
+		A3A03BA414E17AE000EF322F /* GithubRepositories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GithubRepositories.h; sourceTree = "<group>"; };
+		A3A03BA514E17AE000EF322F /* GithubRepositories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GithubRepositories.m; sourceTree = "<group>"; };
+		A3A03BA714E17AE000EF322F /* GroupedTableModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupedTableModel.h; sourceTree = "<group>"; };
+		A3A03BA814E17AE000EF322F /* GroupedTableModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupedTableModel.m; sourceTree = "<group>"; };
+		A3A03BA914E17AE000EF322F /* GroupedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupedTableViewController.h; sourceTree = "<group>"; };
+		A3A03BAA14E17AE000EF322F /* GroupedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupedTableViewController.m; sourceTree = "<group>"; };
+		A3A03BAB14E17AE000EF322F /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A3A03BAC14E17AE000EF322F /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		A3A03BAE14E17AE000EF322F /* SearchTableModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTableModel.h; sourceTree = "<group>"; };
+		A3A03BAF14E17AE000EF322F /* SearchTableModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTableModel.m; sourceTree = "<group>"; };
+		A3A03BB014E17AE000EF322F /* SearchTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTableViewController.h; sourceTree = "<group>"; };
+		A3A03BB114E17AE000EF322F /* SearchTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTableViewController.m; sourceTree = "<group>"; };
+		A3A03BB214E17AE000EF322F /* SearchTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchTableViewController.xib; sourceTree = "<group>"; };
+		A3A03BB414E17AE000EF322F /* SimpleObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleObject.h; sourceTree = "<group>"; };
+		A3A03BB514E17AE000EF322F /* SimpleObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleObject.m; sourceTree = "<group>"; };
+		A3A03BB614E17AE000EF322F /* SimpleTableModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleTableModel.h; sourceTree = "<group>"; };
+		A3A03BB714E17AE000EF322F /* SimpleTableModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleTableModel.m; sourceTree = "<group>"; };
+		A3A03BB814E17AE000EF322F /* SimpleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleTableViewController.h; sourceTree = "<group>"; };
+		A3A03BB914E17AE000EF322F /* SimpleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleTableViewController.m; sourceTree = "<group>"; };
+		A3A03BBA14E17AE000EF322F /* TableViewModelAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewModelAppDelegate.h; sourceTree = "<group>"; };
+		A3A03BBB14E17AE000EF322F /* TableViewModelAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewModelAppDelegate.m; sourceTree = "<group>"; };
+		A3A03BCA14E17AF500EF322F /* LRAbstractTableModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRAbstractTableModel.h; sourceTree = "<group>"; };
+		A3A03BCB14E17AF500EF322F /* LRAbstractTableModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRAbstractTableModel.m; sourceTree = "<group>"; };
+		A3A03BCC14E17AF500EF322F /* LRTableModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRTableModel.h; sourceTree = "<group>"; };
+		A3A03BCD14E17AF500EF322F /* LRTableModelCellProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRTableModelCellProvider.h; sourceTree = "<group>"; };
+		A3A03BCE14E17AF500EF322F /* LRTableModelEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRTableModelEvent.h; sourceTree = "<group>"; };
+		A3A03BCF14E17AF500EF322F /* LRTableModelEvent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRTableModelEvent.m; sourceTree = "<group>"; };
+		A3A03BD014E17AF500EF322F /* LRTableModelEventListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRTableModelEventListener.h; sourceTree = "<group>"; };
+		A3A03BD514E17B1100EF322F /* libLRTableModel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLRTableModel.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3A03BD914E17B1100EF322F /* LRTableModel-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LRTableModel-Prefix.pch"; sourceTree = "<group>"; };
+		A3A03BDA14E17B1100EF322F /* LRTableModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRTableModel.h; sourceTree = "<group>"; };
+		A3A03BDB14E17B1100EF322F /* LRTableModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRTableModel.m; sourceTree = "<group>"; };
+		A3A03BE814E17B4800EF322F /* libPods-specs.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "libPods-specs.a"; path = "Pods/build/Release-iphoneos/libPods-specs.a"; sourceTree = "<group>"; };
+		A3D492691210AA210076940C /* Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3D4926A1210AA210076940C /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
+		A3D492791210AA7E0076940C /* TestHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestHelper.h; sourceTree = "<group>"; };
+		A3D492821210AB0C0076940C /* TestHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestHelper.m; sourceTree = "<group>"; };
+		A3D494E41210BE130076940C /* SimpleTableViewModelTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleTableViewModelTest.m; sourceTree = "<group>"; };
+		A3D4959C1210C6190076940C /* HCPassesBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCPassesBlock.h; sourceTree = "<group>"; };
+		A3D4959D1210C6190076940C /* HCPassesBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCPassesBlock.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3A03BE614E17B3E00EF322F /* libLRTableModel.a in Frameworks */,
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3A03BD214E17B1100EF322F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3A03BD614E17B1100EF322F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3D492661210AA210076940C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3A03BE914E17B4800EF322F /* libPods-specs.a in Frameworks */,
+				A3A03BE714E17B4800EF322F /* libLRTableModel.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A3A03BCA14E17AF500EF322F /* LRAbstractTableModel.h */,
+				A3A03BCB14E17AF500EF322F /* LRAbstractTableModel.m */,
+				A3A03BCC14E17AF500EF322F /* LRTableModel.h */,
+				A3A03BCD14E17AF500EF322F /* LRTableModelCellProvider.h */,
+				A3A03BCE14E17AF500EF322F /* LRTableModelEvent.h */,
+				A3A03BCF14E17AF500EF322F /* LRTableModelEvent.m */,
+				A3A03BD014E17AF500EF322F /* LRTableModelEventListener.h */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* LRTableModel.app */,
+				A3D492691210AA210076940C /* Tests.octest */,
+				A3A03BD514E17B1100EF322F /* libLRTableModel.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				A3A03BA014E17AE000EF322F /* Examples */,
+				A3D492721210AA590076940C /* Tests */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				A3A03BD714E17B1100EF322F /* LRTableModel */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+				A3A03BE814E17B4800EF322F /* libPods-specs.a */,
+				A3D4926A1210AA210076940C /* Tests-Info.plist */,
+				A3A03B9D14E17A0F00EF322F /* Pods-specs.xcconfig */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* LRTableModel_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107310486CEB800E47090 /* LRTableModel-Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
+				662FE6D91D8E41DBB58A189B /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A3A03BA014E17AE000EF322F /* Examples */ = {
+			isa = PBXGroup;
+			children = (
+				A3A03BA114E17AE000EF322F /* Examples.plist */,
+				A3A03BA214E17AE000EF322F /* ExamplesIndexViewController.h */,
+				A3A03BA314E17AE000EF322F /* ExamplesIndexViewController.m */,
+				A3A03BA414E17AE000EF322F /* GithubRepositories.h */,
+				A3A03BA514E17AE000EF322F /* GithubRepositories.m */,
+				A3A03BA614E17AE000EF322F /* GroupedTableModel */,
+				A3A03BAB14E17AE000EF322F /* main.m */,
+				A3A03BAC14E17AE000EF322F /* MainWindow.xib */,
+				A3A03BAD14E17AE000EF322F /* SearchTableModel */,
+				A3A03BB314E17AE000EF322F /* SimpleTableModel */,
+				A3A03BBA14E17AE000EF322F /* TableViewModelAppDelegate.h */,
+				A3A03BBB14E17AE000EF322F /* TableViewModelAppDelegate.m */,
+			);
+			path = Examples;
+			sourceTree = "<group>";
+		};
+		A3A03BA614E17AE000EF322F /* GroupedTableModel */ = {
+			isa = PBXGroup;
+			children = (
+				A3A03BA714E17AE000EF322F /* GroupedTableModel.h */,
+				A3A03BA814E17AE000EF322F /* GroupedTableModel.m */,
+				A3A03BA914E17AE000EF322F /* GroupedTableViewController.h */,
+				A3A03BAA14E17AE000EF322F /* GroupedTableViewController.m */,
+			);
+			path = GroupedTableModel;
+			sourceTree = "<group>";
+		};
+		A3A03BAD14E17AE000EF322F /* SearchTableModel */ = {
+			isa = PBXGroup;
+			children = (
+				A3A03BAE14E17AE000EF322F /* SearchTableModel.h */,
+				A3A03BAF14E17AE000EF322F /* SearchTableModel.m */,
+				A3A03BB014E17AE000EF322F /* SearchTableViewController.h */,
+				A3A03BB114E17AE000EF322F /* SearchTableViewController.m */,
+				A3A03BB214E17AE000EF322F /* SearchTableViewController.xib */,
+			);
+			path = SearchTableModel;
+			sourceTree = "<group>";
+		};
+		A3A03BB314E17AE000EF322F /* SimpleTableModel */ = {
+			isa = PBXGroup;
+			children = (
+				A3A03BB414E17AE000EF322F /* SimpleObject.h */,
+				A3A03BB514E17AE000EF322F /* SimpleObject.m */,
+				A3A03BB614E17AE000EF322F /* SimpleTableModel.h */,
+				A3A03BB714E17AE000EF322F /* SimpleTableModel.m */,
+				A3A03BB814E17AE000EF322F /* SimpleTableViewController.h */,
+				A3A03BB914E17AE000EF322F /* SimpleTableViewController.m */,
+			);
+			path = SimpleTableModel;
+			sourceTree = "<group>";
+		};
+		A3A03BD714E17B1100EF322F /* LRTableModel */ = {
+			isa = PBXGroup;
+			children = (
+				A3A03BDA14E17B1100EF322F /* LRTableModel.h */,
+				A3A03BDB14E17B1100EF322F /* LRTableModel.m */,
+				A3A03BD814E17B1100EF322F /* Supporting Files */,
+			);
+			path = LRTableModel;
+			sourceTree = "<group>";
+		};
+		A3A03BD814E17B1100EF322F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A3A03BD914E17B1100EF322F /* LRTableModel-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A3D492721210AA590076940C /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				A3D492751210AA590076940C /* Support */,
+				A3D492761210AA590076940C /* Unit */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		A3D492751210AA590076940C /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				A3D4959C1210C6190076940C /* HCPassesBlock.h */,
+				A3D4959D1210C6190076940C /* HCPassesBlock.m */,
+				A3D492791210AA7E0076940C /* TestHelper.h */,
+				A3D492821210AB0C0076940C /* TestHelper.m */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		A3D492761210AA590076940C /* Unit */ = {
+			isa = PBXGroup;
+			children = (
+				A3D494E41210BE130076940C /* SimpleTableViewModelTest.m */,
+			);
+			path = Unit;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		A3A03BD314E17B1100EF322F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3A03BE214E17B2900EF322F /* LRAbstractTableModel.h in Headers */,
+				A3A03BE314E17B2900EF322F /* LRTableModelCellProvider.h in Headers */,
+				A3A03BE414E17B2900EF322F /* LRTableModelEvent.h in Headers */,
+				A3A03BE514E17B2900EF322F /* LRTableModelEventListener.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* Example App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Example App" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+				9F6A389D73A545BBA7FE5D49 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Example App";
+			productName = TableViewModel;
+			productReference = 1D6058910D05DD3D006BFB54 /* LRTableModel.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A3A03BD414E17B1100EF322F /* LRTableModel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A3A03BDD14E17B1100EF322F /* Build configuration list for PBXNativeTarget "LRTableModel" */;
+			buildPhases = (
+				A3A03BD114E17B1100EF322F /* Sources */,
+				A3A03BD214E17B1100EF322F /* Frameworks */,
+				A3A03BD314E17B1100EF322F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LRTableModel;
+			productName = LRTableModel;
+			productReference = A3A03BD514E17B1100EF322F /* libLRTableModel.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		A3D492681210AA210076940C /* Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A3D4926D1210AA210076940C /* Build configuration list for PBXNativeTarget "Tests" */;
+			buildPhases = (
+				A3D492641210AA210076940C /* Resources */,
+				A3D492651210AA210076940C /* Sources */,
+				A3D492661210AA210076940C /* Frameworks */,
+				A3D492671210AA210076940C /* ShellScript */,
+				9F6A389D73A545BBA7FE5D49 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tests;
+			productName = Tests;
+			productReference = A3D492691210AA210076940C /* Tests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "LRTableModel" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* Example App */,
+				A3A03BD414E17B1100EF322F /* LRTableModel */,
+				A3D492681210AA210076940C /* Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3A03BBC14E17AE000EF322F /* Examples.plist in Resources */,
+				A3A03BC214E17AE000EF322F /* MainWindow.xib in Resources */,
+				A3A03BC514E17AE000EF322F /* SearchTableViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3D492641210AA210076940C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9F6A389D73A545BBA7FE5D49 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
+		A3D492671210AA210076940C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				A3A03BBD14E17AE000EF322F /* ExamplesIndexViewController.m in Sources */,
+				A3A03BBE14E17AE000EF322F /* GithubRepositories.m in Sources */,
+				A3A03BBF14E17AE000EF322F /* GroupedTableModel.m in Sources */,
+				A3A03BC014E17AE000EF322F /* GroupedTableViewController.m in Sources */,
+				A3A03BC114E17AE000EF322F /* main.m in Sources */,
+				A3A03BC314E17AE000EF322F /* SearchTableModel.m in Sources */,
+				A3A03BC414E17AE000EF322F /* SearchTableViewController.m in Sources */,
+				A3A03BC614E17AE000EF322F /* SimpleObject.m in Sources */,
+				A3A03BC714E17AE000EF322F /* SimpleTableModel.m in Sources */,
+				A3A03BC814E17AE000EF322F /* SimpleTableViewController.m in Sources */,
+				A3A03BC914E17AE000EF322F /* TableViewModelAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3A03BD114E17B1100EF322F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3A03BDC14E17B1100EF322F /* LRTableModel.m in Sources */,
+				A3A03BE014E17B2200EF322F /* LRAbstractTableModel.m in Sources */,
+				A3A03BE114E17B2200EF322F /* LRTableModelEvent.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3D492651210AA210076940C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3D492831210AB0C0076940C /* TestHelper.m in Sources */,
+				A3D494E91210BE2E0076940C /* SimpleTableViewModelTest.m in Sources */,
+				A3D4959E1210C6190076940C /* HCPassesBlock.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = LRTableModel_Prefix.pch;
+				INFOPLIST_FILE = "LRTableModel-Info.plist";
+				PRODUCT_NAME = LRTableModel;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = LRTableModel_Prefix.pch;
+				INFOPLIST_FILE = "LRTableModel-Info.plist";
+				PRODUCT_NAME = LRTableModel;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A3A03BDE14E17B1100EF322F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/LRTableModel.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LRTableModel/LRTableModel-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		A3A03BDF14E17B1100EF322F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/LRTableModel.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LRTableModel/LRTableModel-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A3D4926B1210AA210076940C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3A03B9D14E17A0F00EF322F /* Pods-specs.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				INFOPLIST_FILE = "Tests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					SenTestingKit,
+					"-framework",
+					UIKit,
+					"-all_load",
+					"-lstdc++",
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = Tests;
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "Support/**";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		A3D4926C1210AA210076940C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3A03B9D14E17A0F00EF322F /* Pods-specs.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/xcodeproj.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				INFOPLIST_FILE = "Tests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					SenTestingKit,
+					"-framework",
+					UIKit,
+					"-all_load",
+					"-lstdc++",
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = Tests;
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "Support/**";
+				WRAPPER_EXTENSION = octest;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				PREBINDING = NO;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PREBINDING = NO;
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Example App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A3A03BDD14E17B1100EF322F /* Build configuration list for PBXNativeTarget "LRTableModel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3A03BDE14E17B1100EF322F /* Debug */,
+				A3A03BDF14E17B1100EF322F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A3D4926D1210AA210076940C /* Build configuration list for PBXNativeTarget "Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3D4926B1210AA210076940C /* Debug */,
+				A3D4926C1210AA210076940C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "LRTableModel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
