@@ -17,7 +17,7 @@ SPEC_BEGIN(SimpleTableViewModelSpec)
 describe(@"SimpleTableModel", ^{
 
   __block SimpleTableModel *model = nil;
-  __block LRMockery *context = [[LRMockery mockeryForTestCase:self] retain];
+  __block __strong LRMockery *mockery = [LRMockery mockeryForTestCase:self];
   
   beforeEach(^{
     model = [[SimpleTableModel alloc] initWithCellProvider:nil];
@@ -53,19 +53,19 @@ describe(@"SimpleTableModel", ^{
   });
   
   context(@"with an event listener", ^{
-    __block id mockListener = [context mock:[LRMockEventListener class]];
+    __block id mockListener = [mockery mock:[LRMockEventListener class]];
     
     beforeEach(^{
       [model addTableModelListener:mockListener];
     });
     
     afterEach(^{
-      [context assertSatisfied];
-      [context reset];
+      [mockery assertSatisfied];
+      [mockery reset];
     });
     
     it(@"notifies the listener of an insertion when the object is added", ^{
-      [context checking:^(LRExpectationBuilder *expects) {
+      [mockery checking:^(LRExpectationBuilder *expects) {
         [[expects oneOf:mockListener] tableModelChanged:insertEventAtRow(0)];
       }];
       
@@ -73,7 +73,7 @@ describe(@"SimpleTableModel", ^{
     });
     
     it(@"notifies the listener of an update when an existing object is replaced", ^{
-      [context checking:^(LRExpectationBuilder *expects) {
+      [mockery checking:^(LRExpectationBuilder *expects) {
         [[expects oneOf:mockListener] tableModelChanged:insertEventAtRow(0)];
         [[expects oneOf:mockListener] tableModelChanged:insertEventAtRow(1)];
       }];
@@ -81,7 +81,7 @@ describe(@"SimpleTableModel", ^{
       [model addObject:@"an object"];
       [model addObject:@"another object"];
       
-      [context checking:^(LRExpectationBuilder *expects) {
+      [mockery checking:^(LRExpectationBuilder *expects) {
         [[expects oneOf:mockListener] tableModelChanged:updateEventAtRow(1)];
       }];
       
@@ -89,13 +89,13 @@ describe(@"SimpleTableModel", ^{
     });
     
     it(@"notifies the listener of a deletion when an existing object is removed", ^{
-      [context checking:^(LRExpectationBuilder *expects) {
+      [mockery checking:^(LRExpectationBuilder *expects) {
         [[expects oneOf:mockListener] tableModelChanged:insertEventAtRow(0)];
       }];
       
       [model addObject:@"an object"];
       
-      [context checking:^(LRExpectationBuilder *expects) {
+      [mockery checking:^(LRExpectationBuilder *expects) {
         [[expects oneOf:mockListener] tableModelChanged:deleteEventAtRow(0)];
       }];
       
@@ -103,7 +103,7 @@ describe(@"SimpleTableModel", ^{
     });
     
     it(@"notifies the listener of a refresh when the whole data set is replaced", ^{
-      [context checking:^(LRExpectationBuilder *expects) {
+      [mockery checking:^(LRExpectationBuilder *expects) {
         [[expects oneOf:mockListener] tableModelChanged:refreshEvent()];
       }];
       
@@ -111,7 +111,7 @@ describe(@"SimpleTableModel", ^{
     });
     
     it(@"does not notify listener when it has been removed", ^{
-      [context checking:^(LRExpectationBuilder *expects) {
+      [mockery checking:^(LRExpectationBuilder *expects) {
         [[expects never:mockListener] tableModelChanged:insertEventAtRow(0)];
       }];
       

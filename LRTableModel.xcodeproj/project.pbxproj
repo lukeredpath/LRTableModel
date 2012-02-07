@@ -35,6 +35,7 @@
 		A3A03BE614E17B3E00EF322F /* libLRTableModel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3A03BD514E17B1100EF322F /* libLRTableModel.a */; };
 		A3A03BE714E17B4800EF322F /* libLRTableModel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3A03BD514E17B1100EF322F /* libLRTableModel.a */; };
 		A3A03BE914E17B4800EF322F /* libPods-specs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3A03BE814E17B4800EF322F /* libPods-specs.a */; };
+		A3A03BFF14E181E100EF322F /* SimpleTableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A03BB714E17AE000EF322F /* SimpleTableModel.m */; };
 		A3D492831210AB0C0076940C /* TestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D492821210AB0C0076940C /* TestHelper.m */; };
 		A3D494E91210BE2E0076940C /* SimpleTableViewModelTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D494E41210BE130076940C /* SimpleTableViewModelTest.m */; };
 		A3D4959E1210C6190076940C /* HCPassesBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D4959D1210C6190076940C /* HCPassesBlock.m */; };
@@ -357,7 +358,6 @@
 				A3D492651210AA210076940C /* Sources */,
 				A3D492661210AA210076940C /* Frameworks */,
 				A3D492671210AA210076940C /* ShellScript */,
-				9F6A389D73A545BBA7FE5D49 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -415,20 +415,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		9F6A389D73A545BBA7FE5D49 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
-		};
 		A3D492671210AA210076940C /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -480,6 +466,7 @@
 				A3D492831210AB0C0076940C /* TestHelper.m in Sources */,
 				A3D494E91210BE2E0076940C /* SimpleTableViewModelTest.m in Sources */,
 				A3D4959E1210C6190076940C /* HCPassesBlock.m in Sources */,
+				A3A03BFF14E181E100EF322F /* SimpleTableModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -574,6 +561,7 @@
 			baseConfigurationReference = A3A03B9D14E17A0F00EF322F /* Pods-specs.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				DSTROOT = /tmp/xcodeproj.dst;
@@ -585,6 +573,7 @@
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "Tests-Info.plist";
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -608,6 +597,7 @@
 			baseConfigurationReference = A3A03B9D14E17A0F00EF322F /* Pods-specs.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = YES;
 				DSTROOT = /tmp/xcodeproj.dst;
@@ -617,6 +607,7 @@
 				);
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "Tests-Info.plist";
 				OTHER_LDFLAGS = (
 					"-framework",

@@ -12,10 +12,10 @@ SPEC_BEGIN(DemoSpec)
 
 describe(@"A simple test", ^{
   
-  LRMockery *context = [[LRMockery mockeryForTestCase:self] retain];
+  LRMockery *mockery = [LRMockery mockeryForTestCase:self];
   
   afterEach(^{
-    [context assertSatisfied];
+    [mockery assertSatisfied];
   });
   
   it(@"should work", ^{
@@ -23,9 +23,9 @@ describe(@"A simple test", ^{
   });
   
   it(@"should integrate with Mocky", ^{
-    id mockObject = [context mock:[NSString class]];
+    id mockObject = [mockery mock:[NSString class]];
     
-    [context checking:^(LRExpectationBuilder *expects) {
+    [mockery checking:^(LRExpectationBuilder *expects) {
       [[expects oneOf:mockObject] uppercaseString];
     }]; 
     
@@ -41,22 +41,22 @@ SPEC_END
 @end
 
 id insertEventAtRow(int rowIndex) {
-  return LRM_with(equalTo([LRTableModelEvent insertionAtRow:rowIndex section:0]));
+  return equalTo([LRTableModelEvent insertionAtRow:rowIndex section:0]);
 }
 
 id anyEvent() {
-  return LRM_with(instanceOf([LRTableModelEvent class]));
+  return instanceOf([LRTableModelEvent class]);
 }
 
 id updateEventAtRow(int rowIndex) {
-  return LRM_with(equalTo([LRTableModelEvent updatedRow:rowIndex section:0]));
+  return equalTo([LRTableModelEvent updatedRow:rowIndex section:0]);
 }
 
 id deleteEventAtRow(int rowIndex) {
-  return LRM_with(equalTo([LRTableModelEvent deletedRow:rowIndex section:0]));
+  return equalTo([LRTableModelEvent deletedRow:rowIndex section:0]);
 }
 
 id refreshEvent() {
-  return LRM_with(equalTo([LRTableModelEvent refreshedData]));
+  return equalTo([LRTableModelEvent refreshedData]);
 }
 

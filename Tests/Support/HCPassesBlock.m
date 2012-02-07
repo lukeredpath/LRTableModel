@@ -13,23 +13,16 @@
 
 + (id)passesBlock:(HCPassesBlockBlock)block withMessage:(NSString *)message;
 {
-  return [[[self alloc] initWithBlock:block expectationMessage:message] autorelease];
+  return [[self alloc] initWithBlock:block expectationMessage:message];
 }
 
 - (id)initWithBlock:(HCPassesBlockBlock)theBlock expectationMessage:(NSString *)expectationMessage;
 {
   if (self = [super init]) {
-    block = Block_copy(theBlock);
+    block = theBlock;
     message = [expectationMessage copy];
   }
   return self;
-}
-
-- (void)dealloc
-{
-  Block_release(block);
-  [message release];
-  [super dealloc];
 }
 
 - (BOOL)matches:(id)item
