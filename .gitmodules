@@ -1,9 +1,0 @@
-[submodule "Support/Kiwi"]
-	path = Support/Kiwi
-	url = http://github.com/alding/Kiwi.git
-[submodule "Support/LRMocky"]
-	path = Support/LRMocky
-	url = git://github.com/lukeredpath/LRMocky.git
-[submodule "Support/OCHamcrest"]
-	path = Support/OCHamcrest
-	url = http://github.com/pivotal/OCHamcrest.git
