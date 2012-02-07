@@ -22,11 +22,5 @@
   return self;
 }
 
-- (void)dealloc
-{
-  [title release];
-  [description release];
-  [super dealloc];
-}
 
 @end

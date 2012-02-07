@@ -20,12 +20,6 @@
   return self;
 }
 
-- (void)dealloc
-{
-  [sections release];
-  [sectionTitles release];
-  [super dealloc];
-}
 
 - (NSArray *)objectsInSection:(NSInteger)sectionIndex;
 {
@@ -60,7 +54,7 @@
  
   [self beginUpdates];
   
-  id lastObject = [[lastSection lastObject] retain];
+  id lastObject = [lastSection lastObject];
   NSInteger indexOfLastObject = [lastSection indexOfObject:lastObject];
   [lastSection removeLastObject];
   [self notifyListeners:[LRTableModelEvent deletedRow:indexOfLastObject section:[sections indexOfObject:lastSection]]];
@@ -68,14 +62,13 @@
   for (NSMutableArray *section in sections) {
     [section insertObject:lastObject atIndex:0];
     [self notifyListeners:[LRTableModelEvent insertionAtRow:0 section:[sections indexOfObject:section]]];
-    [lastObject release];
     
     [self endUpdates];
     
     if (section != [sections lastObject]) {
       [self beginUpdates];
       
-      lastObject = [[section lastObject] retain];
+      lastObject = [section lastObject];
       NSInteger indexOfLastObject = [section indexOfObject:lastObject];
       [section removeLastObject];
       [self notifyListeners:[LRTableModelEvent deletedRow:indexOfLastObject section:[sections indexOfObject:section]]];

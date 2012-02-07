@@ -23,11 +23,6 @@
   return self;
 }
 
-- (void)dealloc
-{
-  [filteredObjects release];
-  [super dealloc];
-}
 
 - (NSArray *)activeCollection;
 {
@@ -56,13 +51,11 @@ NSPredicate *predicateForPrefix(NSString *prefix)
 
 - (void)filterObjectsWithPrefix:(NSString *)prefix;
 {
-  [filteredObjects release];
-  filteredObjects = [[objects filteredArrayUsingPredicate:predicateForPrefix(prefix)] retain];
+  filteredObjects = [objects filteredArrayUsingPredicate:predicateForPrefix(prefix)];
 }
 
 - (void)clearSearchFilter;
 {
-  [filteredObjects release];
   filteredObjects = nil;
   [self notifyListeners:[LRTableModelEvent refreshedData]];
 }

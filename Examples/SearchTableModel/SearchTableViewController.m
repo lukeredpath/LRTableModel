@@ -20,11 +20,6 @@
   return [self initWithNibName:@"SearchTableViewController" bundle:nil];
 }
 
-- (void)dealloc
-{
-  [searchTableModel release];
-  [super dealloc];
-}
 
 - (void)awakeFromNib
 {
@@ -42,7 +37,6 @@
   [[GithubRepositories exampleRepositories] enumerateObjectsUsingBlock:^(id repository, NSUInteger idx, BOOL *stop) {
     SimpleObject *object = [[SimpleObject alloc] initWithTitle:[repository objectForKey:@"name"] description:[repository objectForKey:@"description"]];
     [objects addObject:object];
-    [object release];
   }];
   
   [self.searchTableModel setObjects:objects];
@@ -58,7 +52,7 @@
 
 - (UITableViewCell *)cellForObjectAtIndexPath:(NSIndexPath *)indexPath reuseIdentifier:(NSString *)reuseIdentifier
 {
-  return [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:reuseIdentifier] autorelease];
+  return [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:reuseIdentifier];
 }
 
 - (void)configureCell:(UITableViewCell *)cell forObject:(id)object atIndexPath:(NSIndexPath *)indexPath

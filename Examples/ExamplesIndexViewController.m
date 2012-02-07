@@ -19,15 +19,10 @@
   return self;
 }
 
-- (void)dealloc
-{
-  [examples release];
-  [super dealloc];
-}
 
 - (void)loadExamplesFromPlistNamed:(NSString *)plistName inBundle:(NSBundle *)bundle
 {
-  examples = [[NSArray arrayWithContentsOfFile:[bundle pathForResource:plistName ofType:@"plist"]] retain];
+  examples = [NSArray arrayWithContentsOfFile:[bundle pathForResource:plistName ofType:@"plist"]];
   [self notifyListeners:[LRTableModelEvent refreshedData]];
 }
 
@@ -50,11 +45,6 @@
 
 @implementation ExamplesIndexViewController
 
-- (void)dealloc
-{
-  [examplesTableModel release];
-  [super dealloc];
-}
 
 - (ExamplesTableModel *)examplesTableModel
 {
@@ -85,7 +75,7 @@
 
 - (UITableViewCell *)cellForObjectAtIndexPath:(NSIndexPath *)indexPath reuseIdentifier:(NSString *)reuseIdentifier
 {
-  return [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:reuseIdentifier] autorelease];
+  return [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:reuseIdentifier];
 }
 
 - (void)configureCell:(UITableViewCell *)cell forObject:(id)object atIndexPath:(NSIndexPath *)indexPath
@@ -105,7 +95,6 @@
   UIViewController *exampleViewController = [[NSClassFromString([exampleData valueForKey:@"controller"]) alloc] init];
   exampleViewController.title = [exampleData valueForKey:@"name"];
   [self.navigationController pushViewController:exampleViewController animated:YES];
-  [exampleViewController release];
 }
 
 @end

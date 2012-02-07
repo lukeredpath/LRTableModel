@@ -17,7 +17,7 @@
   SimpleTableModel *tableModel;
   UISegmentedControl *sortOrderControl;
 }
-@property (nonatomic, readonly) SimpleTableModel *tableModel;
+@property (unsafe_unretained, nonatomic, readonly) SimpleTableModel *tableModel;
 
 - (void)configureToolbarItems;
 @end

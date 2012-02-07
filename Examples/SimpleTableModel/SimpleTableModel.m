@@ -26,11 +26,6 @@
   return self;
 }
 
-- (void)dealloc
-{
-  [objects release];
-  [super dealloc];
-}
 
 /*
  * Performance note: calculating sorted objects for every call is going to be expensive

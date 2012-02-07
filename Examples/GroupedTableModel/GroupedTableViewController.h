@@ -15,5 +15,5 @@
 @interface GroupedTableViewController : UITableViewController <LRTableModelCellProvider, LRTableModelEventListener> {
   GroupedTableModel *tableModel;
 }
-@property (nonatomic, readonly) GroupedTableModel *tableModel;
+@property (unsafe_unretained, nonatomic, readonly) GroupedTableModel *tableModel;
 @end

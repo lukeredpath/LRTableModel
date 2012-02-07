@@ -19,5 +19,5 @@
 @interface ExamplesIndexViewController : UITableViewController <LRTableModelEventListener, LRTableModelCellProvider> {
   ExamplesTableModel *examplesTableModel;
 }
-@property (nonatomic, readonly) ExamplesTableModel *examplesTableModel;
+@property (unsafe_unretained, nonatomic, readonly) ExamplesTableModel *examplesTableModel;
 @end
