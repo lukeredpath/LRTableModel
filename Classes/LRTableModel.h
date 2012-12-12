@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import "LRTableModelEventListener.h"
-#import "LRTableModelCellProvider.h"
 
 @protocol LRTableModel <NSObject>
 

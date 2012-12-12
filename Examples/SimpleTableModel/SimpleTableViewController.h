@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 
 #import "LRTableModelEventListener.h"
-#import "LRTableModelCellProvider.h"
 
 @class SortableTableModel;
 

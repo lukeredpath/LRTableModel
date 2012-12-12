@@ -29,7 +29,6 @@
 		A3A03BE014E17B2200EF322F /* LRSelfNotifyingTableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A03BCB14E17AF500EF322F /* LRSelfNotifyingTableModel.m */; };
 		A3A03BE114E17B2200EF322F /* LRTableModelEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A03BCF14E17AF500EF322F /* LRTableModelEvent.m */; };
 		A3A03BE214E17B2900EF322F /* LRSelfNotifyingTableModel.h in Headers */ = {isa = PBXBuildFile; fileRef = A3A03BCA14E17AF500EF322F /* LRSelfNotifyingTableModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A3A03BE314E17B2900EF322F /* LRTableModelCellProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = A3A03BCD14E17AF500EF322F /* LRTableModelCellProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A3A03BE414E17B2900EF322F /* LRTableModelEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = A3A03BCE14E17AF500EF322F /* LRTableModelEvent.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A3A03BE514E17B2900EF322F /* LRTableModelEventListener.h in Headers */ = {isa = PBXBuildFile; fileRef = A3A03BD014E17AF500EF322F /* LRTableModelEventListener.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A3A03BE614E17B3E00EF322F /* libLRTableModel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3A03BD514E17B1100EF322F /* libLRTableModel.a */; };
@@ -80,7 +79,6 @@
 		A3A03BCA14E17AF500EF322F /* LRSelfNotifyingTableModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRSelfNotifyingTableModel.h; sourceTree = "<group>"; };
 		A3A03BCB14E17AF500EF322F /* LRSelfNotifyingTableModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRSelfNotifyingTableModel.m; sourceTree = "<group>"; };
 		A3A03BCC14E17AF500EF322F /* LRTableModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRTableModel.h; sourceTree = "<group>"; };
-		A3A03BCD14E17AF500EF322F /* LRTableModelCellProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRTableModelCellProvider.h; sourceTree = "<group>"; };
 		A3A03BCE14E17AF500EF322F /* LRTableModelEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRTableModelEvent.h; sourceTree = "<group>"; };
 		A3A03BCF14E17AF500EF322F /* LRTableModelEvent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRTableModelEvent.m; sourceTree = "<group>"; };
 		A3A03BD014E17AF500EF322F /* LRTableModelEventListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRTableModelEventListener.h; sourceTree = "<group>"; };
@@ -135,7 +133,6 @@
 				A3A03BCA14E17AF500EF322F /* LRSelfNotifyingTableModel.h */,
 				A3A03BCB14E17AF500EF322F /* LRSelfNotifyingTableModel.m */,
 				A3A03BCC14E17AF500EF322F /* LRTableModel.h */,
-				A3A03BCD14E17AF500EF322F /* LRTableModelCellProvider.h */,
 				A3A03BCE14E17AF500EF322F /* LRTableModelEvent.h */,
 				A3A03BCF14E17AF500EF322F /* LRTableModelEvent.m */,
 				A3A03BD014E17AF500EF322F /* LRTableModelEventListener.h */,
@@ -290,7 +287,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3A03BE214E17B2900EF322F /* LRSelfNotifyingTableModel.h in Headers */,
-				A3A03BE314E17B2900EF322F /* LRTableModelCellProvider.h in Headers */,
 				A3A03BE414E17B2900EF322F /* LRTableModelEvent.h in Headers */,
 				A3A03BE514E17B2900EF322F /* LRTableModelEventListener.h in Headers */,
 			);
