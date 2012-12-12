@@ -9,10 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "LRTableModelEvent.h"
 
-@protocol LRTableModelEventListener
+@protocol LRTableModelEventListener <NSObject>
+
 - (void)tableModelChanged:(LRTableModelEvent *)changeEvent;
 
 @optional
 - (void)tableModelWillBeginUpdates;
 - (void)tableModelDidEndUpdates;
+
 @end

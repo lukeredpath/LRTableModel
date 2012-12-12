@@ -31,14 +31,18 @@
 - (void)beginUpdates
 {
   for (id<LRTableModelEventListener> listener in _eventListeners) {
-    [listener tableModelWillBeginUpdates];
+    if ([listener respondsToSelector:@selector(tableModelWillBeginUpdates)]) {
+      [listener tableModelWillBeginUpdates];
+    }
   }
 }
 
 - (void)endUpdates
 {
   for (id<LRTableModelEventListener> listener in _eventListeners) {
-    [listener tableModelDidEndUpdates];
+    if ([listener respondsToSelector:@selector(tableModelDidEndUpdates)]) {
+      [listener tableModelDidEndUpdates];
+    }
   }
 }
 
