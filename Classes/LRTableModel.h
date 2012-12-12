@@ -15,8 +15,6 @@
 - (NSInteger)numberOfSections;
 - (NSInteger)numberOfRowsInSection:(NSInteger)sectionIndex;
 - (id)objectAtIndexPath:(NSIndexPath *)indexPath;
-- (NSString *)headerforSection:(NSInteger)section;
-- (void)addTableModelListener:(id<LRTableModelEventListener>)listener;
-- (void)removeTableModelListener:(id<LRTableModelEventListener>)listener;
+- (NSString *)titleforSection:(NSInteger)section;
 
 @end

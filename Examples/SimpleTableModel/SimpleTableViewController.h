@@ -11,13 +11,13 @@
 #import "LRTableModelEventListener.h"
 #import "LRTableModelCellProvider.h"
 
-@class SimpleTableModel;
+@class SortableTableModel;
 
-@interface SimpleTableViewController : UITableViewController <LRTableModelEventListener, LRTableModelCellProvider> {
-  SimpleTableModel *tableModel;
+@interface SimpleTableViewController : UITableViewController <LRTableModelEventListener> {
+  SortableTableModel *tableModel;
   UISegmentedControl *sortOrderControl;
 }
-@property (unsafe_unretained, nonatomic, readonly) SimpleTableModel *tableModel;
+@property (unsafe_unretained, nonatomic, readonly) SortableTableModel *tableModel;
 
 - (void)configureToolbarItems;
 @end

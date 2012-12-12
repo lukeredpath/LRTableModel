@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "SimpleTableModel.h"
+#import "SortableTableModel.h"
 
-@interface GroupedTableModel : SimpleTableModel
+@interface GroupedTableModel : SortableTableModel
 {
   NSMutableArray *sections;
   NSMutableArray *sectionTitles;

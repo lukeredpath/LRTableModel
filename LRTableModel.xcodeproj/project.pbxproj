@@ -10,6 +10,7 @@
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
+		A38666961678B52C0099BD04 /* LRCollectionTableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A38666941678B00E0099BD04 /* LRCollectionTableModel.m */; };
 		A3A03BBC14E17AE000EF322F /* Examples.plist in Resources */ = {isa = PBXBuildFile; fileRef = A3A03BA114E17AE000EF322F /* Examples.plist */; };
 		A3A03BBD14E17AE000EF322F /* ExamplesIndexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A03BA314E17AE000EF322F /* ExamplesIndexViewController.m */; };
 		A3A03BBE14E17AE000EF322F /* GithubRepositories.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A03BA514E17AE000EF322F /* GithubRepositories.m */; };
@@ -21,20 +22,20 @@
 		A3A03BC414E17AE000EF322F /* SearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A03BB114E17AE000EF322F /* SearchTableViewController.m */; };
 		A3A03BC514E17AE000EF322F /* SearchTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3A03BB214E17AE000EF322F /* SearchTableViewController.xib */; };
 		A3A03BC614E17AE000EF322F /* SimpleObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A03BB514E17AE000EF322F /* SimpleObject.m */; };
-		A3A03BC714E17AE000EF322F /* SimpleTableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A03BB714E17AE000EF322F /* SimpleTableModel.m */; };
+		A3A03BC714E17AE000EF322F /* SortableTableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A03BB714E17AE000EF322F /* SortableTableModel.m */; };
 		A3A03BC814E17AE000EF322F /* SimpleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A03BB914E17AE000EF322F /* SimpleTableViewController.m */; };
 		A3A03BC914E17AE000EF322F /* TableViewModelAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A03BBB14E17AE000EF322F /* TableViewModelAppDelegate.m */; };
 		A3A03BD614E17B1100EF322F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
-		A3A03BE014E17B2200EF322F /* LRAbstractTableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A03BCB14E17AF500EF322F /* LRAbstractTableModel.m */; };
+		A3A03BE014E17B2200EF322F /* LRSelfNotifyingTableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A03BCB14E17AF500EF322F /* LRSelfNotifyingTableModel.m */; };
 		A3A03BE114E17B2200EF322F /* LRTableModelEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A03BCF14E17AF500EF322F /* LRTableModelEvent.m */; };
-		A3A03BE214E17B2900EF322F /* LRAbstractTableModel.h in Headers */ = {isa = PBXBuildFile; fileRef = A3A03BCA14E17AF500EF322F /* LRAbstractTableModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A3A03BE214E17B2900EF322F /* LRSelfNotifyingTableModel.h in Headers */ = {isa = PBXBuildFile; fileRef = A3A03BCA14E17AF500EF322F /* LRSelfNotifyingTableModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A3A03BE314E17B2900EF322F /* LRTableModelCellProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = A3A03BCD14E17AF500EF322F /* LRTableModelCellProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A3A03BE414E17B2900EF322F /* LRTableModelEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = A3A03BCE14E17AF500EF322F /* LRTableModelEvent.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A3A03BE514E17B2900EF322F /* LRTableModelEventListener.h in Headers */ = {isa = PBXBuildFile; fileRef = A3A03BD014E17AF500EF322F /* LRTableModelEventListener.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A3A03BE614E17B3E00EF322F /* libLRTableModel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3A03BD514E17B1100EF322F /* libLRTableModel.a */; };
 		A3A03BE714E17B4800EF322F /* libLRTableModel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3A03BD514E17B1100EF322F /* libLRTableModel.a */; };
 		A3A03BE914E17B4800EF322F /* libPods-specs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3A03BE814E17B4800EF322F /* libPods-specs.a */; };
-		A3A03BFF14E181E100EF322F /* SimpleTableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A03BB714E17AE000EF322F /* SimpleTableModel.m */; };
+		A3A03BFF14E181E100EF322F /* SortableTableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A03BB714E17AE000EF322F /* SortableTableModel.m */; };
 		A3D492831210AB0C0076940C /* TestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D492821210AB0C0076940C /* TestHelper.m */; };
 		A3D494E91210BE2E0076940C /* SimpleTableViewModelTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D494E41210BE130076940C /* SimpleTableViewModelTest.m */; };
 		A3D4959E1210C6190076940C /* HCPassesBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D4959D1210C6190076940C /* HCPassesBlock.m */; };
@@ -49,6 +50,8 @@
 		32CA4F630368D1EE00C91783 /* LRTableModel_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRTableModel_Prefix.pch; sourceTree = "<group>"; };
 		662FE6D91D8E41DBB58A189B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D1107310486CEB800E47090 /* LRTableModel-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "LRTableModel-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		A38666931678B00E0099BD04 /* LRCollectionTableModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRCollectionTableModel.h; sourceTree = "<group>"; };
+		A38666941678B00E0099BD04 /* LRCollectionTableModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRCollectionTableModel.m; sourceTree = "<group>"; };
 		A3A03B9D14E17A0F00EF322F /* Pods-specs.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Pods-specs.xcconfig"; path = "Pods/Pods-specs.xcconfig"; sourceTree = "<group>"; };
 		A3A03BA114E17AE000EF322F /* Examples.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Examples.plist; sourceTree = "<group>"; };
 		A3A03BA214E17AE000EF322F /* ExamplesIndexViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExamplesIndexViewController.h; sourceTree = "<group>"; };
@@ -68,14 +71,14 @@
 		A3A03BB214E17AE000EF322F /* SearchTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchTableViewController.xib; sourceTree = "<group>"; };
 		A3A03BB414E17AE000EF322F /* SimpleObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleObject.h; sourceTree = "<group>"; };
 		A3A03BB514E17AE000EF322F /* SimpleObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleObject.m; sourceTree = "<group>"; };
-		A3A03BB614E17AE000EF322F /* SimpleTableModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleTableModel.h; sourceTree = "<group>"; };
-		A3A03BB714E17AE000EF322F /* SimpleTableModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleTableModel.m; sourceTree = "<group>"; };
+		A3A03BB614E17AE000EF322F /* SortableTableModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SortableTableModel.h; sourceTree = "<group>"; };
+		A3A03BB714E17AE000EF322F /* SortableTableModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SortableTableModel.m; sourceTree = "<group>"; };
 		A3A03BB814E17AE000EF322F /* SimpleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleTableViewController.h; sourceTree = "<group>"; };
 		A3A03BB914E17AE000EF322F /* SimpleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleTableViewController.m; sourceTree = "<group>"; };
 		A3A03BBA14E17AE000EF322F /* TableViewModelAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewModelAppDelegate.h; sourceTree = "<group>"; };
 		A3A03BBB14E17AE000EF322F /* TableViewModelAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewModelAppDelegate.m; sourceTree = "<group>"; };
-		A3A03BCA14E17AF500EF322F /* LRAbstractTableModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRAbstractTableModel.h; sourceTree = "<group>"; };
-		A3A03BCB14E17AF500EF322F /* LRAbstractTableModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRAbstractTableModel.m; sourceTree = "<group>"; };
+		A3A03BCA14E17AF500EF322F /* LRSelfNotifyingTableModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRSelfNotifyingTableModel.h; sourceTree = "<group>"; };
+		A3A03BCB14E17AF500EF322F /* LRSelfNotifyingTableModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRSelfNotifyingTableModel.m; sourceTree = "<group>"; };
 		A3A03BCC14E17AF500EF322F /* LRTableModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRTableModel.h; sourceTree = "<group>"; };
 		A3A03BCD14E17AF500EF322F /* LRTableModelCellProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRTableModelCellProvider.h; sourceTree = "<group>"; };
 		A3A03BCE14E17AF500EF322F /* LRTableModelEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRTableModelEvent.h; sourceTree = "<group>"; };
@@ -127,8 +130,10 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				A3A03BCA14E17AF500EF322F /* LRAbstractTableModel.h */,
-				A3A03BCB14E17AF500EF322F /* LRAbstractTableModel.m */,
+				A38666931678B00E0099BD04 /* LRCollectionTableModel.h */,
+				A38666941678B00E0099BD04 /* LRCollectionTableModel.m */,
+				A3A03BCA14E17AF500EF322F /* LRSelfNotifyingTableModel.h */,
+				A3A03BCB14E17AF500EF322F /* LRSelfNotifyingTableModel.m */,
 				A3A03BCC14E17AF500EF322F /* LRTableModel.h */,
 				A3A03BCD14E17AF500EF322F /* LRTableModelCellProvider.h */,
 				A3A03BCE14E17AF500EF322F /* LRTableModelEvent.h */,
@@ -205,7 +210,7 @@
 				A3A03BAB14E17AE000EF322F /* main.m */,
 				A3A03BAC14E17AE000EF322F /* MainWindow.xib */,
 				A3A03BAD14E17AE000EF322F /* SearchTableModel */,
-				A3A03BB314E17AE000EF322F /* SimpleTableModel */,
+				A3A03BB314E17AE000EF322F /* SortableTableModel */,
 				A3A03BBA14E17AE000EF322F /* TableViewModelAppDelegate.h */,
 				A3A03BBB14E17AE000EF322F /* TableViewModelAppDelegate.m */,
 			);
@@ -235,16 +240,17 @@
 			path = SearchTableModel;
 			sourceTree = "<group>";
 		};
-		A3A03BB314E17AE000EF322F /* SimpleTableModel */ = {
+		A3A03BB314E17AE000EF322F /* SortableTableModel */ = {
 			isa = PBXGroup;
 			children = (
 				A3A03BB414E17AE000EF322F /* SimpleObject.h */,
 				A3A03BB514E17AE000EF322F /* SimpleObject.m */,
-				A3A03BB614E17AE000EF322F /* SimpleTableModel.h */,
-				A3A03BB714E17AE000EF322F /* SimpleTableModel.m */,
+				A3A03BB614E17AE000EF322F /* SortableTableModel.h */,
+				A3A03BB714E17AE000EF322F /* SortableTableModel.m */,
 				A3A03BB814E17AE000EF322F /* SimpleTableViewController.h */,
 				A3A03BB914E17AE000EF322F /* SimpleTableViewController.m */,
 			);
+			name = SortableTableModel;
 			path = SimpleTableModel;
 			sourceTree = "<group>";
 		};
@@ -283,7 +289,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3A03BE214E17B2900EF322F /* LRAbstractTableModel.h in Headers */,
+				A3A03BE214E17B2900EF322F /* LRSelfNotifyingTableModel.h in Headers */,
 				A3A03BE314E17B2900EF322F /* LRTableModelCellProvider.h in Headers */,
 				A3A03BE414E17B2900EF322F /* LRTableModelEvent.h in Headers */,
 				A3A03BE514E17B2900EF322F /* LRTableModelEventListener.h in Headers */,
@@ -420,7 +426,7 @@
 				A3A03BC314E17AE000EF322F /* SearchTableModel.m in Sources */,
 				A3A03BC414E17AE000EF322F /* SearchTableViewController.m in Sources */,
 				A3A03BC614E17AE000EF322F /* SimpleObject.m in Sources */,
-				A3A03BC714E17AE000EF322F /* SimpleTableModel.m in Sources */,
+				A3A03BC714E17AE000EF322F /* SortableTableModel.m in Sources */,
 				A3A03BC814E17AE000EF322F /* SimpleTableViewController.m in Sources */,
 				A3A03BC914E17AE000EF322F /* TableViewModelAppDelegate.m in Sources */,
 			);
@@ -430,8 +436,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3A03BE014E17B2200EF322F /* LRAbstractTableModel.m in Sources */,
+				A3A03BE014E17B2200EF322F /* LRSelfNotifyingTableModel.m in Sources */,
 				A3A03BE114E17B2200EF322F /* LRTableModelEvent.m in Sources */,
+				A38666961678B52C0099BD04 /* LRCollectionTableModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,7 +449,7 @@
 				A3D492831210AB0C0076940C /* TestHelper.m in Sources */,
 				A3D494E91210BE2E0076940C /* SimpleTableViewModelTest.m in Sources */,
 				A3D4959E1210C6190076940C /* HCPassesBlock.m in Sources */,
-				A3A03BFF14E181E100EF322F /* SimpleTableModel.m in Sources */,
+				A3A03BFF14E181E100EF322F /* SortableTableModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,7 +503,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "LRTableModel/LRTableModel-Prefix.pch";
+				GCC_PREFIX_HEADER = LRTableModel_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -521,7 +528,7 @@
 				DSTROOT = /tmp/LRTableModel.dst;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "LRTableModel/LRTableModel-Prefix.pch";
+				GCC_PREFIX_HEADER = LRTableModel_Prefix.pch;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;

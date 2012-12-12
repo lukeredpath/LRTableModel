@@ -7,7 +7,7 @@
 //
 
 #import "TestHelper.h"
-#import "SimpleTableModel.h"
+#import "SortableTableModel.h"
 #import "LRTableModelEventListener.h"
 #import "LRTableModelEvent.h"
 
@@ -16,11 +16,11 @@ SPEC_BEGIN(SimpleTableViewModelSpec)
 
 describe(@"SimpleTableModel", ^{
 
-  __block SimpleTableModel *model = nil;
+  __block SortableTableModel *model = nil;
   __block __strong LRMockery *mockery = [LRMockery mockeryForTestCase:self];
   
   beforeEach(^{
-    model = [[SimpleTableModel alloc] initWithCellProvider:nil];
+    model = [[SortableTableModel alloc] initWithCellProvider:nil];
   });
   
   context(@"with a single object", ^{

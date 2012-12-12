@@ -8,16 +8,17 @@
 
 #import "SimpleTableViewController.h"
 #import "SimpleObject.h"
-#import "SimpleTableModel.h"
+#import "SortableTableModel.h"
 #import "GithubRepositories.h"
 
 @implementation SimpleTableViewController
 
 
-- (SimpleTableModel *)tableModel
+- (SortableTableModel *)tableModel
 {
   if (tableModel == nil) {
-    tableModel = [[SimpleTableModel alloc] initWithCellProvider:self];
+    tableModel = [[SortableTableModel alloc] init];
+
     [tableModel addTableModelListener:self];
   }
   return tableModel;
@@ -30,12 +31,12 @@
   [self configureToolbarItems];
   
   self.tableView.rowHeight = 65;
-  self.tableView.dataSource = self.tableModel;
   
   UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addButtonTapped:)];
   [self.navigationItem setRightBarButtonItem:addButton];
   
   NSMutableArray *objects = [NSMutableArray array];
+  
   [[GithubRepositories exampleRepositories] enumerateObjectsUsingBlock:^(id repository, NSUInteger idx, BOOL *stop) {
     SimpleObject *object = [[SimpleObject alloc] initWithTitle:[repository objectForKey:@"name"] description:[repository objectForKey:@"description"]];
     [objects addObject:object];
@@ -81,7 +82,19 @@
 
 - (void)sortOrderControlChanged:(UISegmentedControl *)control
 {
-  [self.tableModel setSortOrder:control.selectedSegmentIndex];
+  switch (control.selectedSegmentIndex) {
+    case 0:
+      [self.tableModel setSortDescriptors:nil];
+      break;
+    case 1:
+      [self.tableModel setSortDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"title" ascending:YES]]];
+      break;
+    case 2:
+      [self.tableModel setSortDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"title" ascending:NO]]];
+      break;
+    default:
+      break;
+  }
 }
 
 #pragma mark -
@@ -102,15 +115,23 @@
   }
 }
 
-#pragma mark -
-#pragma mark LRTableModelCellProvider methods
+#pragma mark - UITableViewDataSource
 
-- (UITableViewCell *)cellForObjectAtIndexPath:(NSIndexPath *)indexPath reuseIdentifier:(NSString *)reuseIdentifier
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-  return [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:reuseIdentifier];
+  static NSString *CellIdentifier = @"SimpleCell";
+  
+  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+  
+  if (cell == nil) {
+    cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:reuseIdentifier];
+  }
+  return cell;
 }
 
-- (void)configureCell:(UITableViewCell *)cell forObject:(id)object atIndexPath:(NSIndexPath *)indexPath
+#pragma mark - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
   SimpleObject *simpleObject = object;
   

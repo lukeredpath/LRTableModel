@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "SimpleTableModel.h"
+#import "SortableTableModel.h"
 
-@interface SearchTableModel : SimpleTableModel {
+@interface SearchTableModel : SortableTableModel {
   NSArray *filteredObjects;
 }
 - (void)filterObjectsWithPrefix:(NSString *)prefix;
